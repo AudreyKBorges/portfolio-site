@@ -39,6 +39,10 @@ body {
     grid-area: footer;
   }
 
+  .audrey {
+    grid-area: image;
+  }
+
   .grid-container {
     display: grid;
     grid-template-areas:
@@ -47,7 +51,8 @@ body {
       "about"
       "projects"
       "contact"
-      "footer";
+      "footer"
+      "image";
   }
 
   .grid-container {
@@ -58,7 +63,8 @@ body {
     "about"
     "projects"
     "contact"
-    "footer";
+    "footer"
+    "image";
   }
   nav ul {
     display: flex;
@@ -66,7 +72,7 @@ body {
   }
 
   /* Headings */
-  h2 {
+  h1 {
     font-family: 'Montserrat', sans-serif;
      color: white;
   }
@@ -82,8 +88,6 @@ body {
   .audrey { 
     border-radius: 50%; 
     border: #FFBD69 1px solid;
-    width: 100px;
-    height: 100px;
 }
 
   /* Nav Bar */
@@ -92,14 +96,15 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #202040;
     font-family: 'Montserrat', sans-serif;
+    background: transparent;
   }
 
   li a {
     display: list-item;
     color: white;
     text-align: center;
+    font-size: 16px;
     padding: 15px;
     text-decoration: none;
   }
@@ -111,6 +116,10 @@ body {
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: #111;
+    color: #FFBD69;
   }
+
+  li a:visited {
+    color: #ff6363;
+}
 }
