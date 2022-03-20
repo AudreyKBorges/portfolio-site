@@ -7,7 +7,7 @@ body {
 }
 
 
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
@@ -66,9 +66,16 @@ body {
     "footer"
     "image";
   }
+  
   nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    border-bottom: .5px solid #fff;
   }
 
   /* Headings */
@@ -82,6 +89,8 @@ body {
   .banner {
     max-width: 100%;
     height: auto;
+    padding-top: 3em;
+    border-bottom: .5px solid #fff;
   }
 
   /* Headshot Image */
@@ -119,7 +128,4 @@ body {
     color: #FFBD69;
   }
 
-  li a:visited {
-    color: #ff6363;
-}
 }
