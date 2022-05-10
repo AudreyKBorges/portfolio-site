@@ -103,6 +103,14 @@ html,body{
     border: #FFBD69 1px solid;
 }
 
+  /* Audrey's List Screenshot */
+  .ALscreenshot {
+    width: 30%;
+    display: inline-block;
+    margin-left: 15em;
+    margin-top: 2em;
+  }
+
   /* Nav Bar */
   .main-nav {
     background: transparent;
