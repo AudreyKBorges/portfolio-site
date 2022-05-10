@@ -82,6 +82,8 @@ html,body{
     animation: backInDown;
     animation-duration: 1s;
     letter-spacing: 1px;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   h2, h3, h4, p {
@@ -94,11 +96,11 @@ html,body{
     text-align: center;
   }
 
-  h4:hover {
+  h3:hover {
     color: #FFBD69;
   }
 
-  h4:active {
+  h3:active {
     color: #f36363;
   }
 
@@ -109,18 +111,21 @@ html,body{
     height: auto;
     padding-top: 3em;
     border-bottom: .5px solid #fff;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
   }
 
   /* Headshot Image */
   .audrey { 
     border-radius: 50%; 
-    border: #FFBD69 1px solid;
+    border: #FFBD69 2px solid;
+    background: #202040;
+    padding: 20px;
 }
 
   /* Audrey's List Screenshot */
   .ALscreenshot {
-    width: 30%;
-    margin-top: 2em; */
+    width: 55%;
+    margin-top: 2em;
   }
 
   /* Nav Bar */
@@ -158,6 +163,7 @@ html,body{
     padding: 0;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
   }
 
   li a {
@@ -196,5 +202,14 @@ html,body{
     height: 100%;
     width: 50%;
     line-height: 1.6;
+  }
+
+  /* Projects Section */
+  .project1 {
+    display: inline-block;
+    width: 800px;
+    background: #533c63;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+    text-align: center;
   }
 }
