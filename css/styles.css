@@ -104,13 +104,24 @@ html,body{
 }
 
   /* Nav Bar */
+  .main-nav {
+    background: transparent;
+  }
+
+  #main-nav.scroll {
+    background: #fff;
+  }
+
+  #main-nav.scroll a {
+    color: #202040;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
-    background: transparent;
   }
 
   li a {
