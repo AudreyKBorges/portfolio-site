@@ -86,6 +86,15 @@ html,body{
     padding-bottom: 1em;
   }
 
+  h2:after { 
+    content:"";
+    display:block;
+    width: 6em;
+    max-width:70%;
+    border-bottom: 0.1em solid #fff;
+    margin: 1em auto 0;
+}
+
   h2, h3, h4, p {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -212,5 +221,6 @@ html,body{
     background: #533c63;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
     text-align: center;
+    margin-top: 2em;
   }
 }
