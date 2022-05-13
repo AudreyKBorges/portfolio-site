@@ -223,4 +223,23 @@ html,body{
     text-align: center;
     margin-top: 2em;
   }
+
+  /* Footer */
+  footer {
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    font-size: 11px; 
+    max-width: 100%;
+    background: #000;
+    color: #fff;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;  
+}
 }
