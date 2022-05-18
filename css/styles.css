@@ -38,6 +38,10 @@ html,body{
     align-items: center;
   }
 
+  .grid-resume {
+    grid-area: resume;
+  }
+
   .grid-contact {
     grid-area: contact;
   }
@@ -69,6 +73,7 @@ html,body{
       "banner"
       "about"
       "projects"
+      "resume"
       "contact"
       "footer"
       "image";
