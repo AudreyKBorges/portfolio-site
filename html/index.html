@@ -22,6 +22,7 @@
             ../images/Linkedin-banner-2021.png 850w" sizes="(max-width: 600px) 480px,
            800px" src="../images/Linkedin-banner-2021.png" alt="Audrey Borges, Web Developer">
         </header>
+    <div class="hamburger-menu">
         <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -31,6 +32,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+    </div>
         <section class="grid-about">
             <h1 class="animate__backInDown">Hello, I'm Audrey!</h1>
             <img class="audrey" srcset="../images/Audrey.JPG 2050w" sizes="(max-width: 600px) 480px,
@@ -71,6 +73,19 @@
 
         </section>
         <section class="grid-contact">
+            <form id="form" action="" method="post">
+                <h3>Contact Me.</h3>
+                <p id="contact">Let's work together. Let me know what kind of site I can build for you.</p>
+                  <label for="email">Name</label><br>
+                  <input type="name" id="name" name="name" placeholder="Enter your name here." target="_blank" required></input><br></br>
+                  <label for="email">Email</label><br></br>
+                  <input type="email" id="email" name="email" placeholder="Enter your email here." target="_blank" required></input><br></br>
+                  <label for="phone">Phone number</label><br></br>
+                  <input type="phone" id="phone" name="phone" placeholder="Enter your phone number here." target="_blank" required></input><br></br>
+                  <label for="textarea">Details please.</label>
+                  <textarea id="textarea" name="textarea" placeholder="Enter your comments here." rows="4" cols="50"></textarea>
+                  <input id="submit" type="submit" value="Submit"></input>
+                </form>
 
         </section>
         <footer class="main-footer">Audrey Borges Designs copyright &copy; <script>document.write(new Date().getFullYear())</script></footer>
