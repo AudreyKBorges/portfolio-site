@@ -229,14 +229,12 @@ html,body{
 
   /* Form */
   form {
-    display: flex;
     border-radius: 10px;
     opacity: 80%;
     padding: 20px;
     margin: 20px;
     color: black;
     display: inline-block;
-    inline-size: 600px; 
     overflow: hidden;
     text-align: center;
     width: 90vw;
@@ -334,7 +332,12 @@ html,body{
   }
 
   /* Text */
-  .home-paragraph, .AL-paragraph, .AL-paragraph2 {
+  .home-paragraph, .AL-paragraph, .AL-paragraph2, #contact {
     width: 70vw;
+  }
+
+  /* Form */
+  form {
+    margin-left: 4vw;
   }
 }

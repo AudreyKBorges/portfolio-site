@@ -34,10 +34,11 @@
         </nav>
     </div>
         <section class="grid-about">
+            <div id="about"></div>
             <h1 class="animate__backInDown">Hello, I'm Audrey!</h1>
             <img class="audrey" srcset="../images/Audrey.JPG 2050w" sizes="(max-width: 600px) 480px,
             800px" alt="Headshot of Audrey">
-            <h2 id="about">About Me</h2>
+            <h2>About Me</h2>
             <div class="home-paragraph">
             <p>I'm a recent Summa Cum Laude graduate of the Bachelor of Science program in Web Design and Development at Champlain College
                 in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. My current stack is pure
@@ -47,14 +48,15 @@
                 The first content management system I ever worked on was Joomla, which was used to manage my former company's website.
             I edited content, managed the blog, and wrote content for the blog as well. My natural curiosity drove me to learn how websites
         are built, so I started learning HTML and CSS then Python and my programming journey took off. I learn more every day, and I love it!</p>
-            <p>Houston, Texas is currently my home base, and the weather is hot but so is the art
+        <div id="portfolio"></div>
+        <p>Houston, Texas is currently my home base, and the weather is hot but so is the art
                 scene. When I'm not building an awesome new web project or working at theCoderSchool teaching kids to code, 
             I go to art museums and art shows, enjoy coffee--love my cold brew with oat milk, and get my nature fix at
         one of Houston's many beautiful parks.</p>
     </div>
         </section>
         <section class="grid-projects">
-            <h2>My Projects</h2>
+            <h2>Portfolio</h2>
             <div class="project1">
             <a href="https://audreyslist.org/" target="_blank"><h3>Audrey's List</h3></a>
             <a href="https://audreyslist.org/" target="_blank"><img class="ALscreenshot" srcset="../images/ALscreenshot.png" alt="Image of Audrey's List homepage"></a>
@@ -65,8 +67,8 @@
                 ensure that it is easy to manage and able to handle many posts as resources are added. The resource page is a post grid that starts as one column on mobile
                 devices, then expands to two and three columns for tablet and desktop sites respectively. There is also a contact form on the contact page that goes to a
                 custom email after it's submitted, and the information is stored in a MySQL database. My future plans include creating a CRUD application in PHP to allow 
-                users to create accounts then add resources themselves.
-            </p>
+                users to create accounts then add and update resources themselves.</p>
+            <div id="contact"></div>
             </div>
         </section>
         <section class="grid-resume">
@@ -75,7 +77,7 @@
         <section class="grid-contact">
             <form id="form" action="" method="post">
                 <h2>Contact Me</h2>
-                <p id="contact">Let's work together. Let me know what kind of site I can build for you.</p><br></br>
+                <p>Let's work together. Let me know what kind of site I can build for you.</p><br></br>
                   <label for="email">Name</label><br>
                   <input type="name" id="name" name="name" placeholder="Enter your name here." target="_blank" required></input><br></br>
                   <label for="email">Email</label><br></br>
