@@ -312,6 +312,20 @@ html,body{
     margin-top: 15px;
     padding: 15px;  
 }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social {
+    text-align: center;
+  }
+
+  .social-h3:hover {
+    color: #fff;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
