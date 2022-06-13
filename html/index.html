@@ -22,8 +22,8 @@
             <img id="home" class="banner" srcset="../images/Linkedin-banner-2021.png 480w,
             ../images/Linkedin-banner-2021.png 850w" sizes="(max-width: 600px) 480px,
            800px" src="../images/Linkedin-banner-2021.png" alt="Audrey Borges, Web Developer">
-        </header>
-    <div class="hamburger-menu">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -34,6 +34,9 @@
             </ul>
         </nav>
     </div>
+</header>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
         <section class="grid-about">
             <div id="about"></div>
             <h1 class="animate__backInDown">Hello, I'm Audrey!</h1>
@@ -97,6 +100,7 @@
                 <a target="_blank" href="https://codepen.io/audrey-borges"><img class="icon" src="../images/codepen.png"></a>
             </div>
         </section>
+    </div>
         <footer class="main-footer">Audrey Borges Web Development copyright &copy; <script>document.write(new Date().getFullYear())</script></footer>
     </div>
 </body>

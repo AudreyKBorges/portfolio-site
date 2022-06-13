@@ -11,12 +11,63 @@ html, body {
   width:100%;
 }
 
-
 @media only screen and (min-width: 320px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
   }
+
+  /* Hamburger Menu */
+
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #202040;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #FFBD69;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
 
   /* Grid Container */
   .main-nav {
@@ -121,6 +172,9 @@ html, body {
   /* Images */
   /* Header Image */
   .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 100%;
     height: auto;
     padding-top: 0;
@@ -191,6 +245,7 @@ html, body {
 
   a {
     text-decoration: none;
+    color: white;
   }
 
   nav ul {
@@ -201,6 +256,8 @@ html, body {
     position: fixed;
     width: 100%;
     border-bottom: .5px solid #fff;
+    top: 0;
+    left: 0;
   }
 
   /* About Section */
@@ -333,15 +390,15 @@ html, body {
 
 @media only screen and (min-width: 992px) {
 
+  /* Hamburger Menu */
+  .openbtn {
+    display: none;
+  }
+  
   /* Navigation */
   nav ul {
     display: flex;
     justify-content: space-evenly;
-  }
-
-  /* Banner */
-  .banner {
-    padding-top: 3em;
   }
 
   /* Text */
