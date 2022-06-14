@@ -29,13 +29,13 @@ html, body {
     background-color: #fff;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 100px;
   }
   
   .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 15px 15px 15px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #202040;
     display: block;
     transition: 0.3s;
@@ -47,12 +47,16 @@ html, body {
   
   .sidebar .closebtn {
     position: absolute;
+    font-size: 50px;
     top: 0;
     right: 25px;
-    font-size: 36px;
     margin-left: 50px;
   }
   
+  .sidebar ul {
+    box-shadow: none;
+  }
+
   .openbtn {
     position: absolute;
     font-size: 50px;
@@ -67,7 +71,6 @@ html, body {
     transition: margin-left .5s;
     padding: 16px;
   }
-  
 
   /* Grid Container */
   .main-nav {
@@ -263,6 +266,7 @@ html, body {
   /* About Section */
   .grid-about {
     text-align: center;
+    margin-top: 10em;
   }
   
   .home-paragraph, .AL-paragraph, .AL-paragraph2, #contact {
@@ -386,6 +390,10 @@ html, body {
 
 @media only screen and (min-width: 768px) {
 
+  .grid-about {
+    padding-top: 15em;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -394,11 +402,21 @@ html, body {
   .openbtn {
     display: none;
   }
-  
+
   /* Navigation */
   nav ul {
     display: flex;
     justify-content: space-evenly;
+  }
+
+  .sidebar a {
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .banner {
+    margin-top: 3.25em;
   }
 
   /* Text */
