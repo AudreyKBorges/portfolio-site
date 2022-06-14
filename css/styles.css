@@ -114,6 +114,7 @@ html, body {
       "banner"
       "about"
       "projects"
+      "resume"
       "contact"
       "footer"
       "image";
@@ -152,6 +153,11 @@ html, body {
     border-bottom: 0.1em solid #fff;
     margin: 1em auto 0;
 }
+
+  h2 {
+    margin-top: 3em;
+    text-align: center;
+  }
 
   h2, h3, h4, p {
     font-family: 'Montserrat', sans-serif;
@@ -201,10 +207,12 @@ html, body {
   /* Nav Bar */
   .main-nav {
     background: transparent;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
   }
 
   #main-nav.scroll {
     background: #fff;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
   }
 
   #main-nav.scroll a {
@@ -285,6 +293,14 @@ html, body {
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
     text-align: center;
     margin-top: 2em;
+  }
+
+  /* Resume */
+  .resume {
+    margin: 3.5em;
+    display: inline-block;
+    width: 90vw;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
   }
 
   /* Form */
