@@ -3,7 +3,6 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audrey Borges Web Developer</title>
     <link rel="stylesheet" href="../css/styles.css">
@@ -19,9 +18,7 @@
 <body>
     <div class="grid-container">
         <header class="grid-banner">
-            <img id="home" class="banner" srcset="../images/Linkedin-banner-2021.png 480w,
-            ../images/Linkedin-banner-2021.png 850w" sizes="(max-width: 600px) 480px,
-           800px" src="../images/Linkedin-banner-2021.png" alt="Audrey Borges, Web Developer">
+            <img id="home" class="banner" src="../images/Linkedin-banner-2021.png" alt="Audrey Borges, Web Developer">
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <ul>
@@ -42,13 +39,12 @@
         </nav>
     </div>
 </header>
-    <div id="main">
+    <div id="content">
         <button class="openbtn" onclick="openNav()">☰</button>
         <section class="grid-about">
             <div id="about"></div>
             <h1 class="animate__backInDown">Hello, I'm Audrey!</h1>
-            <img class="audrey" srcset="../images/Audrey.JPG 2050w" sizes="(max-width: 600px) 480px,
-            800px" alt="Headshot of Audrey">
+            <img class="audrey" src="../images/Audrey.JPG" alt="Headshot of Audrey">
             <h2>About Me</h2>
             <div class="home-paragraph">
             <p>I'm a recent Summa Cum Laude graduate of the Bachelor of Science program in Web Design and Development at Champlain College
@@ -70,7 +66,7 @@
             <h2>Portfolio</h2>
             <div class="project1">
             <a href="https://audreyslist.org/" target="_blank"><h3>Audrey's List</h3></a>
-            <a href="https://audreyslist.org/" target="_blank"><img class="ALscreenshot" srcset="../images/ALscreenshot.png" alt="Image of Audrey's List homepage"></a>
+            <a href="https://audreyslist.org/" target="_blank"><img class="ALscreenshot" src="../images/ALscreenshot.png" alt="Image of Audrey's List homepage"></a>
             <p class="AL-paragraph">Audrey's List is a site made with love for families who have loved ones of all ages who have autism. Families looking for therapy,
                 playgroups, activities, and parent support groups will find these resources on my site. New resources are being added for the Houston area, however
                 I do plan to expand to include other cities around the United States.</p>
@@ -79,7 +75,6 @@
                 devices, then expands to two and three columns for tablet and desktop sites respectively. There is also a contact form on the contact page that goes to a
                 custom email after it's submitted, and the information is stored in a MySQL database. My future plans include creating a CRUD application in PHP to allow 
                 users to create accounts then add and update resources themselves.</p>    
-            <div id="contact"></div>
             </div>
         </section>
         <div id="resume"></div>
@@ -87,31 +82,32 @@
             <h2>Résumé</h2>
             <img class="resume" src="../images/Audrey_Borges_Resume.jpg" alt="Audrey Borges's Resume">
         </section>
+        <div id="contact">
         <section class="grid-contact">
-            <form id="form" action="" method="post">
+            <form id="form" method="post">
                 <h2>Contact Me</h2>
-                <p>Let's work together. Let me know what kind of site I can build for you.</p><br></br>
+                <p>Let's work together. Let me know what kind of site I can build for you.</p><br>
                   <label for="name">Name</label><br>
-                  <input type="name" id="name" name="name" placeholder="Enter your name here." target="_blank" required></input><br></br>
-                  <label for="email">Email</label><br></br>
-                  <input type="email" id="email" name="email" placeholder="Enter your email here." target="_blank" required></input><br></br>
-                  <label for="phone">Phone number</label><br></br>
-                  <input type="phone" id="phone" name="phone" placeholder="Enter your phone number here." target="_blank" required></input><br></br>
-                  <label for="textarea">Details</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name here."><br>
+                  <label for="email">Email</label><br>
+                  <input type="email" id="email" name="email" placeholder="Enter your email here." required><br>
+                  <label for="phone">Phone number</label><br>
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number here." required><br>
+                  <label for="textarea">Details</label><br>
                   <textarea id="textarea" name="textarea" placeholder="Enter your comments here." rows="4" cols="50"></textarea>
-                  <input id="submit" type="submit" value="Send Message"></input>
+                  <input id="submit" type="submit" value="Send Message">
                 </form>
             <h3 class="social-h3">Follow Me on Social</h3> 
             <div class="social">
-                <a target="_blank" href="https://www.linkedin.com/in/audreyborges/"><img class="icon" src="../images/linkedin.png"></a>
-                <a target="_blank" href="https://twitter.com/audreykborges"><img class="icon" src="../images/twitter.png"></a> 
-                <a target="_blank" href="https://github.com/AudreyKBorges"><img class="icon" src="../images/github.png"></a>
-                <a target="_blank" href="https://codepen.io/audrey-borges"><img class="icon" src="../images/codepen.png"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/audreyborges/"><img class="icon" src="../images/linkedin.png" alt="LinkedIn logo"></a>
+                <a target="_blank" href="https://twitter.com/audreykborges"><img class="icon" src="../images/twitter.png" alt="Twitter logo"></a> 
+                <a target="_blank" href="https://github.com/AudreyKBorges"><img class="icon" src="../images/github.png" alt="GitHub logo"></a>
+                <a target="_blank" href="https://codepen.io/audrey-borges"><img class="icon" src="../images/codepen.png" alt="CodePen logo"></a>
             </div>
         </section>
     </div>
         <footer class="main-footer">Audrey Borges Web Development copyright &copy; <script>document.write(new Date().getFullYear())</script></footer>
     </div>
+    </div>
 </body>
-
 </html>	
