@@ -5,10 +5,9 @@
 html, body {
   background-color: #202040;
   border: 0;
-  margin: 0;
+  margin: 0, auto;
   padding: 0;
-  height:100%;
-  width:100%;
+  overflow-x: hidden; 
 }
 
 @media only screen and (min-width: 320px) {
@@ -18,7 +17,6 @@ html, body {
   }
 
   /* Hamburger Menu */
-
   .sidebar {
     height: 100%;
     width: 0;
@@ -50,7 +48,6 @@ html, body {
     font-size: 50px;
     top: 0;
     right: 25px;
-    margin-left: 50px;
   }
   
   .sidebar ul {
@@ -67,7 +64,7 @@ html, body {
     padding: 16px;
   }
   
-  #main {
+  #content {
     transition: margin-left .5s;
   }
 
@@ -78,6 +75,7 @@ html, body {
 
   .grid-banner {
     grid-area: banner;
+    height: 100%;
   }
 
   .grid-about {
@@ -93,6 +91,8 @@ html, body {
 
   .grid-resume {
     grid-area: resume;
+    text-align: center;
+    align-items: center;
   }
 
   .grid-contact {
@@ -109,18 +109,6 @@ html, body {
 
   .grid-container {
     display: grid;
-    grid-template-areas:
-      "nav"
-      "banner"
-      "about"
-      "projects"
-      "resume"
-      "contact"
-      "footer"
-      "image";
-  }
-
-  .grid-container {
     grid-template-columns: 1fr;
     grid-template-areas:
       "nav"
@@ -149,7 +137,7 @@ html, body {
     content:"";
     display:block;
     width: 6em;
-    max-width:70%;
+    max-width: 70%;
     border-bottom: 0.1em solid #fff;
     margin: 1em auto 0;
 }
@@ -179,19 +167,22 @@ html, body {
 
   /* Images */
   /* Header Image */
+
   .banner {
     position: absolute;
     top: 0;
+    right: 0;
     left: 0;
-    max-width: 100%;
-    height: auto;
-    padding-top: 0;
+    display: cover;
+    width: 100%;
     border-bottom: .5px solid #fff;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
   }
 
   /* Headshot Image */
   .audrey { 
+    width: 50%;
+    height: 50%;
     border-radius: 50%; 
     border: #FFBD69 2px solid;
     background: #202040;
@@ -276,11 +267,18 @@ html, body {
     margin-top: 10em;
   }
   
-  .home-paragraph, .AL-paragraph, .AL-paragraph2, #contact {
+  .home-paragraph, .AL-paragraph, .AL-paragraph2 {
     display: inline-block;
     font-size: 16px;
     margin: 1em 2em;
-    height: 100%;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  #contact {
+    display: inline-block;
+    font-size: 16px;
+    margin: 1em 2em;
     line-height: 1.6;
     text-align: left;
   }
@@ -297,7 +295,6 @@ html, body {
 
   /* Resume */
   .resume {
-    margin: 3.5em;
     display: inline-block;
     width: 90vw;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
@@ -308,9 +305,8 @@ html, body {
     border-radius: 10px;
     opacity: 80%;
     padding: 20px;
-    margin: 20px;
     color: black;
-    display: inline-block;
+    display: inline;
     overflow: hidden;
     text-align: center;
     width: 90vw;
@@ -329,6 +325,10 @@ html, body {
     margin: 0 auto;
     border-radius: 2px;
     margin-top: 10px;
+  }
+
+  #contact {
+    text-align: center;
   }
 
   #textarea {
@@ -395,6 +395,11 @@ html, body {
 
   .social {
     text-align: center;
+    margin: 0;
+  }
+
+  .social-h3 {
+    margin: 0;
   }
 
   .social-h3:hover {
@@ -409,9 +414,20 @@ html, body {
     padding-top: 15em;
   }
 
+  #contact {
+    padding-left: 10%;
+    padding-right: 5%;
+    text-align: center;
+  }
+
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
+
+  .audrey {
+    width: 325px;
+    height: 325px;
+  }
 
   /* Hamburger Menu */
   .openbtn {
@@ -435,12 +451,25 @@ html, body {
   }
 
   /* Text */
-  .home-paragraph, .AL-paragraph, .AL-paragraph2, #contact {
+  .home-paragraph, .AL-paragraph, .AL-paragraph2, #contact, .social, .social-h3 {
     width: 70vw;
+  }
+
+  .social, .social-h3 {
+    margin-left: 11em;
+  }
+
+  .social {
+    margin-left: 13em;
   }
 
   /* Form */
   form {
     margin-left: 4vw;
   }
+
+  #contact {
+    padding-left: 32%;
+  }
+
 }
