@@ -1,3 +1,16 @@
+<?php
+/**
+ * PHP version 7.3
+ * 
+ * @category None
+ * @package  None
+ * @author   "Audrey Borges <audrey@audreyborges.com>
+ * @license  https://www.audreyborges.com/ GNU General Public License
+ * @link     https://www.audreyborges.com/
+ */
+
+require_once 'contact-form.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +97,7 @@
         </section>
         <div id="contact">
         <section class="grid-contact">
-            <form id="form" method="post">
+            <form id="form" method="post" name="contact-form" action="contact-form.php">
                 <h2 class="contact-me">Contact Me</h2>
                 <p>Let's work together. Let me know what kind of site I can build for you.</p><br>
                   <label for="name">Name</label><br>
@@ -110,4 +123,4 @@
     </div>
     </div>
 </body>
-</html>	
+</html>
