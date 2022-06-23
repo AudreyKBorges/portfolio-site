@@ -9,7 +9,8 @@
  * @link     https://www.audreyborges.com/
  */
 
-require_once 'contact-form.php';
+require_once 'config.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -97,21 +98,20 @@ require_once 'contact-form.php';
         </section>
         <div id="contact">
         <section class="grid-contact">
-            <form id="form" method="post" name="contact-form" action="contact-form.php">
+            <form id="form" method="post" name="contact-form" action="contact-form.php" onsubmit="return CookieTheFormValues()" >
                 <h2 class="contact-me">Contact Me</h2>
                 <p>Let's work together. Let me know what kind of site I can build for you.</p><br>
                   <label for="name">Name</label><br>
                   <input type="text" id="name" name="name" placeholder="Enter your name here."><br>
                   <label for="email">Email</label><br>
                   <input type="email" id="email" name="email" placeholder="Enter your email here." required><br>
-                  <label for="phone">Phone number</label><br>
-                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number here." required><br>
                   <label for="textarea">Details</label><br>
-                  <textarea id="textarea" name="textarea" placeholder="Enter your comments here." rows="4" cols="50"></textarea>
+                  <textarea id="message" name="message" placeholder="Enter your comments here." rows="4" cols="32"></textarea><br><br>
                   <input id="submit" type="submit" value="Send Message">
                 </form>
+            </div>
+            <div class="grid-social social">
             <h3 class="social-h3">Follow Me on Social</h3> 
-            <div class="social">
                 <a target="_blank" href="https://www.linkedin.com/in/audreyborges/"><img class="icon" src="../images/linkedin.png" alt="LinkedIn logo"></a>
                 <a target="_blank" href="https://twitter.com/audreykborges"><img class="icon" src="../images/twitter.png" alt="Twitter logo"></a> 
                 <a target="_blank" href="https://github.com/AudreyKBorges"><img class="icon" src="../images/github.png" alt="GitHub logo"></a>
