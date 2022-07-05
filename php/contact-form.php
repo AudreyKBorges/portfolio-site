@@ -9,39 +9,22 @@
  * @link     https://www.audreyborges.com/
  */
 
-if (!isset($_POST['submit'])) {
-    echo "Error. Please submit the form.";
-}
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$message = $_POST['message'];
 
-if (isset($_POST['name'])) {
+$email_from = 'audreyborges7@gmail.com';
 
-    $name = $_POST['name'];
-}
+$email_subject = "New Form submission";
 
-$name = isset($_POST['name']) ? $_POST['name'] : '';
-$visitor_email = isset($_POST['email']) ? $_POST['email'] : '';
-$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
-$message = isset($_POST['message']) ? $_POST['message'] : '';
+$email_body = "You have received a new message from the user $name.\n".
+"Here is the message:\n $message".
+$to = "audreyborges7@gmail.com";
 
-if (empty($name) || empty($phone) || empty($visitor_email)) {
-    echo " Please enter your name, phone number and email.";
-    exit;
-}
-
-$sql = "INSERT INTO contact_form_info (name, email, phone, comments) VALUES ('".$name."','".$visitor_email."', '".$phone."', '".$message."')";
-
-$email_from = 'audrey@audreyborges.com';
-$email_subject = "New Form Submission";
-$email_body = "You have received a new message from $name.\n"."email address: $visitor_email\n".
-"Here is the message: \n $message";
-
-$to = "audrey@audreyborges.com";
 $headers = "From: $email_from \r\n";
-'Reply-To: audrey@audreyborges.com' . "\r\n" .
-'X-Mailer: PHP/' . phpversion();
+
+$headers .= "Reply-To: $visitor_email \r\n";
 
 mail($to, $email_subject, $email_body, $headers);
-
-header('Location: thank-you.php');
-exit();
+header('Location: thank-you.php')
 ?>

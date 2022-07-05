@@ -344,13 +344,20 @@ html, body {
     margin-bottom: 10px;
   }
 
-  input, select, textarea, label {
+ select, textarea, label {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
   }
 
+  input, textarea {
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgb(136, 135, 135);
+  }
+
   textarea:focus, input:focus {
-    color: #f36363;
+    box-shadow: 0 0 5px #FFBD69;
+    padding: 3%;
+    border: 1px solid #FFBD69;
   }
 
   #submit {

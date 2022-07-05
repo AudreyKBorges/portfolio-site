@@ -8,8 +8,6 @@
  * @license  https://www.audreyborges.com/ GNU General Public License
  * @link     https://www.audreyborges.com/
  */
-
-require 'contact-form.php';
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +27,6 @@ require 'contact-form.php';
     <script src="../js/script.js"></script>
 </head>
 <body>
-<h1>Hello, <?php echo $name; ?>!</h1>
+<h1 style="text-align:center;">Thank you! Your submission has been received.</h1>
 <p style="text-align:center;">You're one step closer to having a beautiful and functional website! We'll be in touch soon.</p>
 </body>
