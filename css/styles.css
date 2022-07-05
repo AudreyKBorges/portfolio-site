@@ -298,9 +298,12 @@ html, body {
   /* Resume */
   .resume {
     display: inline-block;
-    width: 90vw;
+    width: 100vw;
     margin-top: 2em;
-    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+  }
+
+  .container-resume {
+
   }
 
   /* Form */

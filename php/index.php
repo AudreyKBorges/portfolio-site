@@ -95,7 +95,7 @@ require_once 'config.php';
         <section class="grid-resume">
             <h2>Résumé</h2>
             <div class="container-resume">
-                <embed src="../files/Audrey_Borges_Resume.pdf" type="application/pdf" width="70%" height="1175px"/>
+                <embed src="../files/Audrey_Borges_Resume.pdf" type="application/pdf" width="100%" height="600px"/>
             </div>
         </section>
         <div id="contact">
