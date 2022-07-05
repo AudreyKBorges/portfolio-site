@@ -94,24 +94,25 @@ require_once 'config.php';
         <div id="resume"></div>
         <section class="grid-resume">
             <h2>Résumé</h2>
-            <img class="resume" src="../images/Audrey_Borges_Resume.jpg" alt="Audrey Borges's Resume">
+            <div class="container-resume">
+                <embed src="../files/Audrey_Borges_Resume.pdf" type="application/pdf" width="70%" height="1175px"/>
+            </div>
         </section>
         <div id="contact">
         <section class="grid-contact">
-            <form id="form" method="post" name="contact-form" action="contact-form.php" onsubmit="return CookieTheFormValues()" >
+            <form id="form" method="post" name="form" action="contact-form.php">
                 <h2 class="contact-me">Contact Me</h2>
                 <p>Let's work together. Let me know what kind of site I can build for you.</p><br>
                   <label for="name">Name</label><br>
                   <input type="text" id="name" name="name" placeholder="Enter your name here."><br>
                   <label for="email">Email</label><br>
                   <input type="email" id="email" name="email" placeholder="Enter your email here." required><br>
-                  <label for="textarea">Details</label><br>
-                  <textarea id="message" name="message" placeholder="Enter your comments here." rows="4" cols="32"></textarea><br><br>
+                  <label for="message">Details</label><br>
+                  <textarea id="message" name="message" placeholder="Enter your comments here." rows="4" cols="35"></textarea><br>
                   <input id="submit" type="submit" value="Send Message">
                 </form>
-            </div>
-            <div class="grid-social social">
             <h3 class="social-h3">Follow Me on Social</h3> 
+            <div class="social">
                 <a target="_blank" href="https://www.linkedin.com/in/audreyborges/"><img class="icon" src="../images/linkedin.png" alt="LinkedIn logo"></a>
                 <a target="_blank" href="https://twitter.com/audreykborges"><img class="icon" src="../images/twitter.png" alt="Twitter logo"></a> 
                 <a target="_blank" href="https://github.com/AudreyKBorges"><img class="icon" src="../images/github.png" alt="GitHub logo"></a>
