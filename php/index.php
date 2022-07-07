@@ -47,7 +47,7 @@ require_once 'config.php';
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#resume">Résumé</a></li>
+                <li><a href="../html/resume.html" target="_blank">Résumé</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -89,13 +89,6 @@ require_once 'config.php';
                 devices, then expands to two and three columns for tablet and desktop sites respectively. There is also a contact form on the contact page that goes to a
                 custom email after it's submitted, and the information is stored in a MySQL database. My future plans include creating a CRUD application in PHP to allow 
                 users to create accounts then add and update resources themselves.</p>    
-            </div>
-        </section>
-        <div id="resume"></div>
-        <section class="grid-resume">
-            <h2>Résumé</h2>
-            <div class="container-resume">
-                <embed src="../files/Audrey_Borges_Resume.pdf" type="application/pdf" width="100%" height="600px"/>
             </div>
         </section>
         <div id="contact">
