@@ -8,6 +8,7 @@
  * @license  https://www.audreyborges.com/ GNU General Public License
  * @link     https://www.audreyborges.com/
  */
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ?>
 
 <!DOCTYPE html>

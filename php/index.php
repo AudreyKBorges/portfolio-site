@@ -9,8 +9,57 @@
  * @link     https://www.audreyborges.com/
  */
 
-require_once 'config.php';
+$nameErr = $emailErr = "";
+$name = $email = $comment = "";
 
+function test_input($data) 
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["name"])) {
+        $nameErr = "* Name is required";
+    } else {
+        $name = test_input($_POST["name"]);
+        if (!preg_match("/^[a-zA-Z-' ] *$/", $name)) {
+            $nameErr = "* Only letters and white space allowed";
+        }
+    }
+    
+    if (empty($_POST["email"])) {
+        $emailErr = "* Email is required";
+    } else {
+        $email = test_input($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "* Invalid email format";
+        }
+    }
+
+    if (empty($_POST["comment"])) {
+        $comment = "";
+    } else {
+        $comment = test_input($_POST["comment"]);
+    }
+
+    if (empty($nameErr && $emailErr)) {
+        $toEmail = 'audreyborges7@gmail.com';
+        $emailSubject = 'New email from your contact form';
+        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
+
+        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+        $body = join(PHP_EOL, $bodyParagraphs);
+
+        if (mail($toEmail, $emailSubject, $body, $headers)) {
+            header('Location: thank-you.php');
+        } else {
+            $errorMessage = 'Oops, something went wrong. Please try again later';
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +104,7 @@ require_once 'config.php';
 </header>
     <div id="content">
         <button class="openbtn" onclick="openNav()">☰</button>
+        <div id="site-content">
         <section class="grid-about">
             <div id="about"></div>
             <h1 class="animate__backInDown">Hello, I'm Audrey!</h1>
@@ -80,28 +130,38 @@ require_once 'config.php';
             <h2>Portfolio</h2>
             <div class="project1">
             <a href="https://audreyslist.org/" target="_blank"><h3>Audrey's List</h3></a>
-            <a href="https://audreyslist.org/" target="_blank"><img class="ALscreenshot" src="../images/ALscreenshot.png" alt="Image of Audrey's List homepage"></a>
-            <p class="AL-paragraph">Audrey's List is a site made with love for families who have loved ones of all ages who have autism. Families looking for therapy,
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <img class="AL-screenshot" src="../images/ALscreenshot.png" alt="Image of Audrey's List homepage">
+                    </div>
+                    <div class="flip-card-back">
+                    <p class="AL-paragraph">Audrey's List is a site made with love for families who have loved ones of all ages who have autism. Families looking for therapy,
                 playgroups, activities, and parent support groups will find these resources on my site. New resources are being added for the Houston area, however
                 I do plan to expand to include other cities around the United States.</p>
-            <p class="AL-paragraph2">Audrey's List started out as a hard-coded site, then it was converted to WordPress and a custom theme was designed. The goal is to 
+            <p id="AL-paragraph2" class="AL-paragraph2">Audrey's List started out as a hard-coded site, then it was converted to WordPress and a custom theme was designed. The goal is to 
                 ensure that it is easy to manage and able to handle many posts as resources are added. The resource page is a post grid that starts as one column on mobile
                 devices, then expands to two and three columns for tablet and desktop sites respectively. There is also a contact form on the contact page that goes to a
                 custom email after it's submitted, and the information is stored in a MySQL database. My future plans include creating a CRUD application in PHP to allow 
-                users to create accounts then add and update resources themselves.</p>    
+                users to create accounts then add and update resources themselves.</p>
             </div>
+            </div>
+            </div>
+        </div>
         </section>
         <div id="contact">
         <section class="grid-contact">
-            <form id="form" method="post" name="form" action="contact-form.php">
+            <form id="form" method="post" name="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <h2 class="contact-me">Contact Me</h2>
-                <p>Let's work together. Let me know what kind of site I can build for you.</p><br>
-                  <label for="name">Name</label><br>
+                <p class="contact-para">Let's work together. Let me know what kind of site I can build for you.</p><br>
+                  <label for="name" value="<?php echo $name;?>">Name  *</label><br>
+                  <span class="error"><?php echo $nameErr;?></span><br>
                   <input type="text" id="name" name="name" placeholder="Enter your name here."><br>
-                  <label for="email">Email</label><br>
-                  <input type="email" id="email" name="email" placeholder="Enter your email here." required><br>
-                  <label for="message">Details</label><br>
-                  <textarea id="message" name="message" placeholder="Enter your comments here." rows="4" cols="35"></textarea><br>
+                  <label for="email" value="<?php echo $email;?>">Email  *</label><br>
+                  <span class="error"><?php echo $emailErr;?></span><br>
+                  <input type="email" id="email" name="email" placeholder="Enter your email here."><br>
+                  <label for="message">Details</label><br><br>
+                  <textarea id="message" name="message" placeholder="Enter your comments here." rows="4" cols="35"><?php echo $comment;?></textarea><br><br>
                   <input id="submit" type="submit" value="Send Message">
                 </form>
             <h3 class="social-h3">Follow Me on Social</h3> 
@@ -114,6 +174,7 @@ require_once 'config.php';
         </section>
     </div>
         <footer class="main-footer">Audrey Borges Web Development copyright &copy; <script>document.write(new Date().getFullYear())</script></footer>
+        </div>
     </div>
     </div>
 </body>
