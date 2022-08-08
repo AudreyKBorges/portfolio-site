@@ -71,11 +71,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="../js/script.js"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -88,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#resume">Résumé</a></li>
+                <li><a href="../html/resume.html" target="_blank">Résumé</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         <nav class="main-nav" id="main-nav">
@@ -107,49 +110,77 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="site-content">
         <section class="grid-about">
             <div id="about"></div>
-            <h1 class="animate__backInDown">Hello, I'm Audrey!</h1>
+            <h1 class="animate__bounceInDown">Hello, I'm Audrey!</h1>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
             <img class="audrey" src="../images/Audrey.JPG" alt="Headshot of Audrey">
-            <h2>About Me</h2>
-            <div class="home-paragraph">
-            <p>I'm a recent Summa Cum Laude graduate of the Bachelor of Science program in Web Design and Development at Champlain College
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                <h2 class="about-me">About Me</h2>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+            <p class="home-paragraph">I'm a recent Summa Cum Laude graduate of the Bachelor of Science program in Web Design and Development at Champlain College
                 in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. My current stack is pure
                 HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, Figma, Python, MySQL, sass/scss, Bootstrap and had exposure to Invision,
                 SQL, and the PHP framework, Symfony.</p>
-            <p>Web development became my passion because I am fascinated by technology and I enjoy creative and analytical work.
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+            <p class="home-paragraph">Web development became my passion because I am fascinated by technology and I enjoy creative and analytical work.
                 The first content management system I ever worked on was Joomla, which was used to manage my former company's website.
             I edited content, managed the blog, and wrote content for the blog as well. My natural curiosity drove me to learn how websites
         are built, so I started learning HTML and CSS then Python and my programming journey took off. I learn more every day, and I love it!</p>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
         <div id="portfolio"></div>
-        <p>Houston, Texas is currently my home base, and the weather is hot but so is the art
+        <p class="home-paragraph">Houston, Texas is currently my home base, and the weather is hot but so is the art
                 scene. When I'm not building an awesome new web project or working at theCoderSchool teaching kids to code, 
             I go to art museums and art shows, I enjoy coffee--love my cold brew with oat milk, and I get my nature fix at
         one of Houston's many beautiful parks.</p>
     </div>
         </section>
         <section class="grid-projects">
+        <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
             <h2>Portfolio</h2>
-            <div class="project1">
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+            <div class="project">
             <a href="https://audreyslist.org/" target="_blank"><h3>Audrey's List</h3></a>
-            <div class="flip-card">
+            <div class="align-cards">
+            <div class="flip-card one">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                    <img class="AL-screenshot" src="../images/ALscreenshot.png" alt="Image of Audrey's List homepage">
+                    <img class="AL-screenshot" src="../images/ALscreenshot.png" alt="Audrey's List homepage">
                     </div>
                     <div class="flip-card-back">
-                    <p class="AL-paragraph">Audrey's List is a site made with love for families who have loved ones of all ages who have autism. Families looking for therapy,
+                    <p class="paragraph">Audrey's List is a site designed for those who care for individuals with autism. Families looking for therapy,
                 playgroups, activities, and parent support groups will find these resources on my site. New resources are being added for the Houston area, however
-                I do plan to expand to include other cities around the United States.</p>
-            <p id="AL-paragraph2" class="AL-paragraph2">Audrey's List started out as a hard-coded site, then it was converted to WordPress and a custom theme was designed. The goal is to 
-                ensure that it is easy to manage and able to handle many posts as resources are added. The resource page is a post grid that starts as one column on mobile
-                devices, then expands to two and three columns for tablet and desktop sites respectively. There is also a contact form on the contact page that goes to a
-                custom email after it's submitted, and the information is stored in a MySQL database. My future plans include creating a CRUD application in PHP to allow 
-                users to create accounts then add and update resources themselves.</p>
+                I plan to include other cities around the United States. It was a hard-coded site before I converted it to WordPress. My goal is to make it
+                manage and able to handle many posts as resources are added. Future plans include creating a CRUD application in PHP to allow 
+                users to create accounts then add and update resources.</p>
             </div>
             </div>
+</div>
+</div><br>
+            <a href="http://www.higherlower.xyz/" target="_blank"><h3>Higher - Lower Game</h3></a>
+            <div class="align-cards">
+            <div class="flip-card two">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <img class="AL-screenshot" src="../images/higherlower.png" alt="Higher - Lower Game">
+                    </div>
+                    <div class="flip-card-back">
+                    <p class="paragraph">Higher - Lower is a number guessing game that I developed using HTML/CSS, Bootstrap, and JavaScript.
+                    The application prompts the user for a maximum number, validates the user input and does not allow invalid entries (negative numbers, 0, or non-numbers), 
+                    re-prompting the user if an invalid entry is provided, and rounds decimal numbers if the user enters one. It allows for unlimited user guesses and also 
+                    tracks valid guesses, guesses which are in range, are numbers, and are not duplicate guesses, to use in a victory message. 
+                    </p>
+                </div>
             </div>
         </div>
+        </div>
+            </div>
         </section>
         <div id="contact">
+        <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
         <section class="grid-contact">
             <form id="form" method="post" name="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <h2 class="contact-me">Contact Me</h2>
@@ -171,11 +202,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <a target="_blank" href="https://github.com/AudreyKBorges"><img class="icon" src="../images/github.png" alt="GitHub logo"></a>
                 <a target="_blank" href="https://codepen.io/audrey-borges"><img class="icon" src="../images/codepen.png" alt="CodePen logo"></a>
             </div>
+            </div>
+</div>
+</div>
         </section>
-    </div>
         <footer class="main-footer">Audrey Borges Web Development copyright &copy; <script>document.write(new Date().getFullYear())</script></footer>
         </div>
     </div>
     </div>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

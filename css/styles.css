@@ -7,7 +7,7 @@ html, body {
   border: 0;
   margin: 0, auto;
   padding: 0;
-  overflow-x: hidden; 
+  /* overflow-x: hidden;  */
 }
 
 @media only screen and (min-width: 320px) {
@@ -173,6 +173,7 @@ html, body {
 
   h3 {
     text-align: center;
+    margin-top: 2em;
   }
 
   h3:hover {
@@ -279,44 +280,42 @@ html, body {
     margin-top: 10em;
   }
   
-  .home-paragraph, .AL-paragraph, .AL-paragraph2 {
+  .home-paragraph, .AL-paragraph {
     display: inline-block;
     font-size: 16px;
     margin: 1em 2em;
-    line-height: 1.6;
+    line-height: 1.8;
     text-align: left;
   }
 
   /* Projects Section */
-  .project1 {
+  .project {
     display: inline-block;
     background: #533c63;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
     text-align: center;
     margin-top: 2em;
-    padding-top: 2em;
     padding-bottom: 2em;
     border-radius: 8px;
-  }
-
-  #AL-paragraph2 {
-    display: none;
+    width: 90vw;
+    height: 140vh;
   }
 
   .flip-card {
     background-color: transparent;
     width: 90vw;
-    height: 40vh;
+    height: 50vh;
     border: transparent;
-    perspective: 1000px;
+    perspective: 2000px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3em;
   }
   
   .flip-card-inner {
     position: relative;
     width: 90vw;
-    height: 40vh;
+    height: 50vh;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -324,7 +323,7 @@ html, body {
   
   .AL-screenshot {
     width: 90vw;
-    height: 40vh;
+    height: 50vh;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -335,15 +334,18 @@ html, body {
   .flip-card-back {
     position: absolute;
     width: 90vw;
-    height: 40vh;
+    height: 50vh;
     backface-visibility: hidden;
   }
   
   .flip-card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #000;
     color: white;
     transform: rotateY(180deg);
-    padding: 5px;
+    padding: 15px;
   }  
 
   /* Form */
@@ -483,6 +485,27 @@ html, body {
 
 }
 
+@media only screen and (min-width: 481px) {
+
+  .flip-card {
+    width: 80vw;
+  } 
+
+  .flip-card-inner {
+    width: 80vw;
+  }
+  
+  .AL-screenshot {
+    width: 80vw;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    width: 80vw;
+  } 
+
+}
+
 @media only screen and (min-width: 768px) {
 
   .grid-about {
@@ -490,49 +513,47 @@ html, body {
   }
 
   .flip-card {
-    width: 600px;
-    height: 600px;
-  }
-  
+    width: 70vw;
+  } 
+
   .flip-card-inner {
-    width: 600px;
-    height: 600px;
+    width: 70vw;
   }
   
   .AL-screenshot {
-    width: 600px;
-    height: 600px;
+    width: 70vw;
   }
   
   .flip-card-front,
   .flip-card-back {
-    width: 600px;
-    height: 600px;
+    width: 70vw;
   } 
 
 }
 
 @media only screen and (min-width: 1024px) {
 
+  .align-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .flip-card {
-    width: 70vw;
-    height: 50vw;
+    width: 40vw;
   }
   
   .flip-card-inner {
-    width: 70vw;
-    height: 50vw;
+    width: 40vw;
   }
   
   .AL-screenshot {
-    width: 70vw;
-    height: 50vw;
+    width: 40vw;
   }
   
   .flip-card-front,
   .flip-card-back {
-    width: 70vw;
-    height: 50vw;
+    width: 40vw;
   } 
 
   .audrey {
@@ -572,8 +593,26 @@ html, body {
 
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .grid-about {
     margin-top: 18em;
   }
+
+  .project {
+    height: 160vh;
+  }
+
+  .flip-card {
+    height: 60vh;
+  }
+  
+  .flip-card-inner {
+    height: 60vh;  }
+  
+  .AL-screenshot {
+    height: 60vh;  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    height: 60vh;  } 
 }
