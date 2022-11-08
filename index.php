@@ -126,9 +126,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <p class="home-paragraph">I'm a recent Summa Cum Laude graduate of the Bachelor of Science program in Web Design and Development at Champlain College
-                                in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. My current endeavor involves mastering Java, and it's challenging
-                                but fun. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, 
-                                Figma, Python, MySQL, sass/scss, Bootstrap and had exposure to Invision `and the PHP framework, Symfony.</p>
+                                in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. I earned a full-stack Java certificate through Genesis10's intensive
+                                training program called <a href="https://www.dev-10.com/">Dev10</a>, and it was challenging but fun. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, 
+                                Figma, Python, MySQL, Sass/Scss, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <p class="home-paragraph">Web development became my passion because I am fascinated by technology and I enjoy creative and analytical work.
@@ -137,10 +137,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 are built, so I started learning HTML and CSS then Python and my programming journey took off. I learn more every day, and I love it!</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                        <div id="portfolio"></div>
                             <p class="home-paragraph">Austin, Texas is currently my home base, and it's a fun, friendly and laid back city with fantastic
                                 hiking, several lakes, a great art scene, and the best live music. When I'm not building an awesome new web project, I can 
                                 be found hiking, meandering through a museum or getting my coffee fix at Medici because I need my cold brew with oat milk.</p>
+                        </div>
+                        <div>
+                        <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                            <h3 id="education-h3">Education & Certificates</h3>
+                            </div>
+                            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                                <div>
+                                    <a id="dev10" href="https://www.credly.com/badges/8bcec0f7-3b0c-4273-977a-fddf432d18dd/public_url" target="_blank"><img id="dev10-img" src="./images/dev10-full-stack-java-developer.png" alt="dev10 full stack java developer"></a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                                <div>
+                                    <a id="champlain" href="https://www.parchment.com/u/award/880f29871f13e880a9c9705a7181d8e8" target="_blank"><img id="dev10-img" src="./images/diploma.png" alt="Champlain College BS Web Design and Development"></a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                                <div>
+                                    <a id="champlain" href="https://www.parchment.com/u/award/7bfcb78a9d51e7992f1c7d764107130f" target="_blank"><img id="dev10-img" src="./images/certificate.png" alt="Champlain College Certificate of Concentrated Studies in Web Programming"></a>
+                                </div>
+                            </div>
+                            <div id="portfolio"></div>
                         </div>
                     </section>
                     <section class="grid-projects">
@@ -149,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                         <div class="project">
-                        <a href="https://audreyslist.org/" target="_blank"><h3>Audrey's List</h3></a>
+                        <a href="https://audreyslist.org/" target="_blank"><h3>Audrey's List</a><a href="https://github.com/AudreyKBorges/audreys-list" target="_blank"> | GitHub Project Link</h3></a>
                             <div class="align-cards">
                                 <div class="flip-card one">
                                     <div class="flip-card-inner">
@@ -166,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </div>
                                 </div>
                             </div><br>
-                            <a href="http://www.higherlower.xyz/" target="_blank"><h3>Higher - Lower Game</h3></a>
+                            <a href="http://www.higherlower.xyz/" target="_blank"><h3>Higher - Lower Game</a><a href="https://github.com/AudreyKBorges/higher-lower" target="_blank"> | GitHub Project Link</h3></a>
                             <div class="align-cards">
                                 <div class="flip-card two">
                                     <div class="flip-card-inner">
