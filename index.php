@@ -1,10 +1,10 @@
 <?php
 /**
- * PHP version 7.3
+ * PHP version 8.08
  * 
  * @category None
  * @package  None
- * @author   "Audrey Borges <audrey@audreyborges.com>
+ * @author   "Audrey Borges <audrey.borges@audreyborges.com>
  * @license  https://www.audreyborges.com/ GNU Public License
  * @link     https://www.audreyborges.com/
  */
@@ -24,7 +24,7 @@ function Test_input($data)
 }
 
 $nameErr = $emailErr = "";
-$name = $email = $comment = "";
+$name = $email = $message = "";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -46,18 +46,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($_POST["comment"])) {
-        $comment = "";
+    if (empty($_POST["message"])) {
+        $message = "";
     } else {
-        $comment = test_input($_POST["comment"]);
+        $message = test_input($_POST["message"]);
     }
 
     if (empty($nameErr && $emailErr)) {
-        $toEmail = 'audreyborges7@gmail.com';
+        $toEmail = 'audrey.borges@audreyborges.com';
         $emailSubject = 'New email from your contact form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
-        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+        $bodyParagraphs = ["Name: {$name}\n", "Email: {$email}\n", "Message:", $message];
         $body = join(PHP_EOL, $bodyParagraphs);
 
         if (mail($toEmail, $emailSubject, $body, $headers)) {
@@ -217,7 +217,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <span class="error"><?php echo $emailErr;?></span><br>
                                     <input type="email" id="email" name="email" placeholder="Enter your email here."><br>
                                     <label for="message">Details</label><br><br>
-                                    <textarea id="message" name="message" placeholder="Enter your comments here." rows="4" cols="35"><?php echo $comment;?></textarea><br><br>
+                                    <textarea id="message" name="message" placeholder="Enter your message here." rows="4" cols="35"><?php echo $message;?></textarea><br><br>
                                     <input id="submit" type="submit" value="Send Message">
                             </form>
                             <h3 class="social-h3">Follow Me on Social</h3> 
