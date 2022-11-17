@@ -186,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </div>
                                 </div>
                             </div><br>
-                            <a href="http://www.higherlower.xyz/" target="_blank"><h3>Higher - Lower Game</a><a href="https://github.com/AudreyKBorges/higher-lower" target="_blank"> | GitHub Project Link</h3></a>
+                            <a href="http://www.higherlower.xyz/" target="_blank"><h3>Higher - Lower Game</a><a href="https://github.com/AudreyKBorges/enhanced-higher-lower" target="_blank"> | GitHub Project Link</h3></a>
                             <div class="align-cards">
                                 <div class="flip-card two">
                                     <div class="flip-card-inner">
