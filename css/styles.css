@@ -530,6 +530,34 @@ html, body {
 
 }
 
+@media only screen and (min-width: 481px) and (orientation : landscape) {
+  
+  .AL-screenshot {
+    width: 60vw;
+    height: 50vw;
+  }
+
+  .flip-card {
+    width: 60vw;
+    height: 50vw;
+  } 
+
+  .flip-card-inner {
+    width: 60vw;
+    height: 50vw;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    width: 60vw;
+    height: 50vw;
+  } 
+
+  .project {
+    height: 140vw;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 
   .grid-about {
@@ -580,6 +608,10 @@ html, body {
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .project {
+    height: 100vw;
+  }
 
   .align-cards {
     display: flex;
