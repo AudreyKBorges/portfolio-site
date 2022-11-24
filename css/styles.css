@@ -10,10 +10,21 @@ html, body {
   /* overflow-x: hidden;  */
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (min-width: 320px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
+  }
+
+  /* Video */
+
+  video {
+    display: none;
   }
 
   /* Education & Certificates subsection */
@@ -170,7 +181,7 @@ html, body {
     animation: backInDown;
     animation-duration: 1s;
     letter-spacing: 1px;
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 1em;
   }
 
@@ -321,7 +332,7 @@ html, body {
     padding-bottom: 2em;
     border-radius: 8px;
     width: 100%;
-    height: 100%;
+    height: 150%;
   }
 
   .flip-card {
@@ -528,6 +539,11 @@ html, body {
     width: 80vw;
   } 
 
+  .paragraph2 {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
 }
 
 @media only screen and (min-width: 481px) and (orientation : landscape) {
@@ -555,6 +571,11 @@ html, body {
 
   .project {
     height: 140vw;
+  }
+
+  .paragraph2 {
+    padding-left: 4em;
+    padding-right: 4em;
   }
 }
 
@@ -605,12 +626,17 @@ html, body {
       color: #fff;
     }
 
+    .paragraph2 {
+      padding-left: 5em;
+      padding-right: 5em;
+    }
+
 }
 
 @media only screen and (min-width: 1024px) {
 
   .project {
-    height: 100vw;
+    height: 140vw;
   }
 
   .align-cards {
@@ -696,6 +722,15 @@ html, body {
   
     #education-h3:hover {
       color: #fff;
+    }
+
+    video {
+      width: 55%;
+    }
+
+    .paragraph2 {
+      padding-left: 6em;
+      padding-right: 6em;
     }
 
 }

@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailSubject = 'New email from your contact form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
-        $bodyParagraphs = ["Name: {$name}\n", "Email: {$email}\n", "Message:", $message];
+        $bodyParagraphs = ["Name: {$name}\r\n", "Email: {$email}\r\n", "Message:", $message];
         $body = join(PHP_EOL, $bodyParagraphs);
 
         if (mail($toEmail, $emailSubject, $body, $headers)) {
@@ -66,6 +66,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errorMessage = 'Oops, something went wrong. Please try again later';
         }
     }
+}
+
+// db connection
+$host_name = "db5010818542.hosting-data.io";
+$username = "dbu3360126";
+$password = "5eK6WHwqT9j@46q";
+$dbname = "dbs9152401";
+
+// Create connection
+$conn = new mysqli($host_name, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO `CONTACTS`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
+
+if ($conn->query($sql) === false) {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 ?>
 <!DOCTYPE html>
@@ -202,6 +222,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </div>
                                 </div>
                             </div>
+                            <h3>Travel Genie</a><a href="https://github.com/AudreyKBorges/travel-genie" target="_blank"> | GitHub Project Link</h3></a>
+                            <video controls width="250">
+                                <source src="./media/travel-genie.mp4" type="video/mp4">
+                            </video>
+                            <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Gensis10 Software Developer apprenticeship program.
+                                I worked in a team with two other people, and we planned a project timeline, a wireframe, and a database schema. This project was 
+                                built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React, HTML, CSS, SCSS, 
+                                Git, and GitHub.
+                            </p>
                         </div>
                     </section>
                     <div id="contact">
