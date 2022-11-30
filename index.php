@@ -69,10 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // db connection
-$host_name = "db5010818542.hosting-data.io";
-$username = "dbu3360126";
-$password = "5eK6WHwqT9j@46q";
-$dbname = "dbs9152401";
+$host_name = "******";
+$username = "******";
+$password = "******";
+$dbname = "******";
 
 // Create connection
 $conn = new mysqli($host_name, $username, $password, $dbname);
