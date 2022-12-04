@@ -11,8 +11,15 @@ html, body {
 }
 
 video {
+  background: white;
   width: 100%;
   height: auto;
+  max-width: initial;
+}
+
+.paragraph2 {
+  max-width: 600px;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 320px) {
@@ -20,11 +27,10 @@ video {
   [class*="col-"] {
     width: 100%;
   }
-
-  /* Video */
-
-  video {
-    display: none;
+  
+  h3 {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   /* Education & Certificates subsection */
@@ -140,6 +146,8 @@ video {
 
   .grid-contact {
     grid-area: contact;
+    width: 100%;
+    height: auto; 
     border-radius: 8px;
     border: solid 1px #fff;
     margin-top: 3em;
@@ -181,7 +189,7 @@ video {
     animation: backInDown;
     animation-duration: 1s;
     letter-spacing: 1px;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 1em;
   }
 
@@ -210,11 +218,11 @@ video {
     margin-top: 2em;
   }
 
-  h3:hover {
+  #portfolio-link:hover {
     color: #FFBD69;
   }
 
-  h3:active {
+  #portfolio-link:active {
     color: #f36363;
   }
 
@@ -234,8 +242,8 @@ video {
 
   /* Headshot Image */
   .audrey { 
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: auto;
     border-radius: 50%; 
     border: #FFBD69 2px solid;
     background: #202040;
@@ -317,7 +325,7 @@ video {
   .home-paragraph, .AL-paragraph {
     display: inline-block;
     font-size: 16px;
-    margin: 1em 2em;
+    max-width: 600px;
     line-height: 1.8;
     text-align: left;
   }
@@ -332,13 +340,16 @@ video {
     padding-bottom: 2em;
     border-radius: 8px;
     width: 100%;
-    height: 150%;
+    height: auto; 
+    margin: 0px; 
+    max-width: initial; 
   }
 
   .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 100%;
+    max-width: initial;
+    height: auto;
     border: transparent;
     perspective: 2000px;
     margin-left: auto;
@@ -348,7 +359,6 @@ video {
   
   .flip-card-inner {
     position: relative;
-    /* width: 50vw; */
     height: 50vh;
     text-align: center;
     transition: transform 0.8s;
@@ -398,8 +408,8 @@ video {
   }
 
   .contact-para {
-    padding-left: 1em;
-    padding-right: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
   }
 
   .contact-me {
@@ -448,6 +458,10 @@ video {
     background: transparent;
     padding: 15px;
     border-radius: 8px;
+  }
+
+  textarea {
+    margin: .75em !important;
   }
 
   textarea:focus, input:focus {
@@ -529,29 +543,14 @@ video {
     width: 80vw;
   }
   
-  .AL-screenshot {
-    width: 100%;
-    height: 100%;
-  }
-  
   .flip-card-front,
   .flip-card-back {
     width: 80vw;
   } 
 
-  .paragraph2 {
-    padding-left: 3em;
-    padding-right: 3em;
-  }
-
 }
 
 @media only screen and (min-width: 481px) and (orientation : landscape) {
-  
-  .AL-screenshot {
-    width: 60vw;
-    height: 50vw;
-  }
 
   .flip-card {
     width: 60vw;
@@ -568,18 +567,13 @@ video {
     width: 60vw;
     height: 50vw;
   } 
-
-  .project {
-    height: 140vw;
-  }
-
-  .paragraph2 {
-    padding-left: 4em;
-    padding-right: 4em;
-  }
 }
 
 @media only screen and (min-width: 768px) {
+
+  video {
+    width: 75%;
+  }
 
   .grid-about {
     padding-top: 15em;
@@ -591,11 +585,6 @@ video {
 
   .flip-card-inner {
     width: 70vw;
-  }
-  
-  .AL-screenshot {
-    width: 100%;
-    height: 100%;
   }
   
   .flip-card-front,
@@ -625,19 +614,9 @@ video {
     #education-h3:hover {
       color: #fff;
     }
-
-    .paragraph2 {
-      padding-left: 5em;
-      padding-right: 5em;
-    }
-
 }
 
 @media only screen and (min-width: 1024px) {
-
-  .project {
-    height: 140vw;
-  }
 
   .align-cards {
     display: flex;
@@ -655,21 +634,11 @@ video {
     height: 40vw;
   }
   
-  .AL-screenshot {
-    width: 100%;
-    height: 100%;
-  }
-  
   .flip-card-front,
   .flip-card-back {
     width: 50vw;
     height: 40vw;
   } 
-
-  .audrey {
-    width: 325px;
-    height: 325px;
-  }
 
   /* Hamburger Menu */
   .openbtn {
@@ -727,10 +696,4 @@ video {
     video {
       width: 55%;
     }
-
-    .paragraph2 {
-      padding-left: 6em;
-      padding-right: 6em;
-    }
-
 }

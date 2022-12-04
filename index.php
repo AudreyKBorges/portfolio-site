@@ -8,6 +8,7 @@
  * @license  https://www.audreyborges.com/ GNU Public License
  * @link     https://www.audreyborges.com/
  */
+include 'includes/header.php';
 /**
  * Define data parameter
  * 
@@ -75,64 +76,19 @@ $password = "******";
 $dbname = "******";
 
 // Create connection
-$conn = new mysqli($host_name, $username, $password, $dbname);
+// $conn = new mysqli($host_name, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// // Check connection
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
 
-$sql = "INSERT INTO `CONTACTS`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
+// $sql = "INSERT INTO `contacts`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
 
-if ($conn->query($sql) === false) {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+// if ($conn->query($sql) === false) {
+//     echo "Error: " . $sql . "<br>" . $conn->error;
+// }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrey Borges Web Developer</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
-
-    <body>
-        <div class="grid-container">
-            <header class="grid-banner">
-                <img id="home" class="banner" src="./images/Linkedin-banner-2021.png" alt="Audrey Borges, Web Developer">
-                <div id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="./html/resume.html" target="_blank">Résumé</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <nav class="main-nav" id="main-nav">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="./html/resume.html" target="_blank">Résumé</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-        <div id="content">
             <button class="openbtn" onclick="openNav()">☰</button>
             <div id="site-content">
                     <section class="grid-about">
@@ -145,10 +101,10 @@ if ($conn->query($sql) === false) {
                             <h2 class="about-me">About Me</h2>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                            <p class="home-paragraph">I'm a recent Summa Cum Laude graduate of the Bachelor of Science program in Web Design and Development at Champlain College
+                            <p class="home-paragraph">I'm a recent <i>summa cum laude</i> graduate of the Bachelor of Science program in Web Design and Development at Champlain College
                                 in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. I earned a full-stack Java certificate through Genesis10's intensive
                                 training program called <a href="https://www.dev-10.com/">Dev10</a>, and it was challenging but fun. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, 
-                                Figma, Python, MySQL, Sass/Scss, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
+                                Figma, Python, MySQL, Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <p class="home-paragraph">Web development became my passion because I am fascinated by technology and I enjoy creative and analytical work.
@@ -189,7 +145,8 @@ if ($conn->query($sql) === false) {
                     </div>
                     <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                         <div class="project">
-                        <a href="https://audreyslist.org/" target="_blank"><h3>Audrey's List</a><a href="https://github.com/AudreyKBorges/audreys-list" target="_blank"> | GitHub Project Link</h3></a>
+                            <h3>PHP & WordPress</h3>
+                        <a href="https://audreyslist.org/" target="_blank" id="portfolio-link"><h4>Audrey's List</a> | <a href="https://github.com/AudreyKBorges/audreys-list" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
                             <div class="align-cards">
                                 <div class="flip-card one">
                                     <div class="flip-card-inner">
@@ -200,13 +157,14 @@ if ($conn->query($sql) === false) {
                                             <p class="paragraph">Audrey's List is a site designed for those who care for individuals with autism. Families looking for therapy,
                                                 playgroups, activities, and parent support groups will find these resources on my site. New resources are being added for Houston and Austin, however
                                                 I plan to include other cities around the United States. It was a hard-coded site before I converted it to WordPress. My goal is to make it
-                                                manage and able to handle many posts as resources are added. Future plans include creating a CRUD application in PHP to allow 
-                                                users to create accounts then add and update resources.</p>
+                                                manage and able to handle many posts as resources are added. I recently configured user accounts to allow users to create an account so that they can 
+                                                create and update their own resource listings. My next steps are to add additional content and add a sort function on the resource page.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div><br>
-                            <a href="http://www.higherlower.xyz/" target="_blank"><h3>Higher - Lower Game</a><a href="https://github.com/AudreyKBorges/enhanced-higher-lower" target="_blank"> | GitHub Project Link</h3></a>
+                            <h3>JavaScript</h3>
+                            <a href="http://www.higherlower.xyz/" target="_blank" id="portfolio-link"><h4>Higher - Lower Game</a> | <a href="https://github.com/AudreyKBorges/enhanced-higher-lower" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
                             <div class="align-cards">
                                 <div class="flip-card two">
                                     <div class="flip-card-inner">
@@ -222,34 +180,45 @@ if ($conn->query($sql) === false) {
                                     </div>
                                 </div>
                             </div>
-                            <h3>Travel Genie</a><a href="https://github.com/AudreyKBorges/travel-genie" target="_blank"> | GitHub Project Link</h3></a>
+                            <h3>Java</h3>
+                            <h4>Travel Genie | <a href="https://github.com/AudreyKBorges/travel-genie" target="_blank" id="portfolio-link">GitHub Project Link</a></h4>
                             <video controls width="250">
                                 <source src="./media/travel-genie.mp4" type="video/mp4">
                             </video>
-                            <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Gensis10 Software Developer apprenticeship program.
-                                I worked in a team with two other people, and we planned a project timeline, a wireframe, and a database schema. This project was 
-                                built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React, HTML, CSS, SCSS, 
-                                Git, and GitHub.
+                            <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Dev10 Software Developer apprenticeship program 
+                                completed through Genesis10. I worked on a team with two other people, and we planned a project timeline, a wireframe, and a database 
+                                schema. This project was built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React, 
+                                HTML, CSS, SCSS, Git, and GitHub.
                             </p>
+                            <h3>Content Writing</h3>
+                            <h4><a href="https://thatssola.weebly.com/" target="_blank" id="portfolio-link">A Working Girl's Guide to Los Angeles</a></h4>
+                            
                         </div>
                     </section>
                     <div id="contact">
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                         <section class="grid-contact">
-                            <form id="form" method="post" name="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                                <h2 class="contact-me">Contact Me</h2>
-                                    <p class="contact-para">Let's work together. Let me know what kind of site I can build for you.</p><br>
-                                    <label for="name" value="<?php echo $name;?>">Name  *</label><br>
-                                    <span class="error"><?php echo $nameErr;?></span><br>
-                                    <input type="text" id="name" name="name" placeholder="Enter your name here."><br>
-                                    <label for="email" value="<?php echo $email;?>">Email  *</label><br>
-                                    <span class="error"><?php echo $emailErr;?></span><br>
+                        <form id="form" method="post" name="form" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateCaptcha();">
+                            <h2 class="contact-me">Contact Me</h2>
+                                <p class="contact-para">Let's work together!</p> 
+                                <p class="contact-para">Let me know what kind of site I can build for you.</p><br>
+                                <div>
+                                    <label for="name" value="<?php echo $name;?>">Name  * </label><br>
+                                    <span class="error"><?php echo $nameErr;?></span>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name here.">
+                                </div><br>
+                                <div>
+                                    <label for="email" value="<?php echo $email;?>">Email  * </label><br>
+                                    <span class="error"><?php echo $emailErr;?></span>
                                     <input type="email" id="email" name="email" placeholder="Enter your email here."><br>
-                                    <label for="message">Details</label><br><br>
-                                    <textarea id="message" name="message" placeholder="Enter your message here." rows="4" cols="35"><?php echo $message;?></textarea><br><br>
-                                    <input id="submit" type="submit" value="Send Message">
-                            </form>
-                            <h3 class="social-h3">Follow Me on Social</h3> 
+                                </div>
+                                <div>
+                                    <div><label for="message">Message</label></div>
+                                    <textarea id="message" name="message" placeholder="Enter your message here." rows="5" cols="35"><?php echo $message;?></textarea>
+                                </div><br>
+                                <input id="submit" type="submit" value="Send Message">
+                        </form>
+                                <h3 class="social-h3">Follow Me on Social</h3> 
                             <div class="social">
                                 <a target="_blank" href="https://www.linkedin.com/in/audreyborges/"><img class="icon" src="./images/linkedin.png" alt="LinkedIn logo"></a>
                                 <a target="_blank" href="https://twitter.com/audreykborges"><img class="icon" src="./images/twitter.png" alt="Twitter logo"></a> 
