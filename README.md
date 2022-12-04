@@ -1,4 +1,4 @@
-# portfolio_site
+Portfolio Site
 This is my portfolio site! :)
 
 Front end:
