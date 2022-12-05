@@ -101,7 +101,7 @@ $dbname = "******";
                             <h2 class="about-me">About Me</h2>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                            <p class="home-paragraph">I'm a recent <i>summa cum laude</i> graduate of the Bachelor of Science program in Web Design and Development at Champlain College
+                            <p class="home-paragraph">I'm a recent <i>summa cum laude</i> graduate of the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a>
                                 in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. I earned a full-stack Java certificate through Genesis10's intensive
                                 training program called <a href="https://www.dev-10.com/">Dev10</a>, and it was challenging but fun. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, 
                                 Figma, Python, MySQL, Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
@@ -123,17 +123,22 @@ $dbname = "******";
                             </div>
                             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                                 <div>
-                                    <a id="dev10" href="https://www.credly.com/badges/8bcec0f7-3b0c-4273-977a-fddf432d18dd/public_url" target="_blank"><img id="dev10-img" src="./images/dev10-full-stack-java-developer.png" alt="dev10 full stack java developer"></a>
+                                    <a id="dev10" href="https://www.credly.com/badges/8bcec0f7-3b0c-4273-977a-fddf432d18dd/public_url" target="_blank"><img class="dev10-image" src="./images/dev10-full-stack-java-developer.png" alt="dev10 full stack java developer"></a>
                                 </div>
                             </div>
                             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                                 <div>
-                                    <a id="champlain" href="https://www.parchment.com/u/award/880f29871f13e880a9c9705a7181d8e8" target="_blank"><img id="dev10-img" src="./images/diploma.png" alt="Champlain College BS Web Design and Development"></a>
+                                    <a id="champlain" href="https://www.parchment.com/u/award/880f29871f13e880a9c9705a7181d8e8" target="_blank"><img class="image" src="./images/diploma.png" alt="Champlain College BS Web Design and Development"></a>
                                 </div>
                             </div>
                             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                                 <div>
-                                    <a id="champlain" href="https://www.parchment.com/u/award/7bfcb78a9d51e7992f1c7d764107130f" target="_blank"><img id="dev10-img" src="./images/certificate.png" alt="Champlain College Certificate of Concentrated Studies in Web Programming"></a>
+                                    <a id="champlain2" href="https://www.parchment.com/u/award/7bfcb78a9d51e7992f1c7d764107130f" target="_blank"><img class="image" src="./images/certificate.png" alt="Champlain College Certificate of Concentrated Studies in Web Programming"></a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                                <div>
+                                    <img id="honor-society" class="image" src="./images/honor-society.png" alt="Alpha Sigma Lambda Honor Society">
                                 </div>
                             </div>
                             <div id="portfolio"></div>
@@ -146,6 +151,23 @@ $dbname = "******";
                     <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                         <div class="project">
                             <h3>PHP & WordPress</h3>
+                            <a href="https://www.audreyborges.com/" target="_blank" id="portfolio-link"><h4>Portfolio Site</a> | <a href="https://github.com/AudreyKBorges/portfolio-site" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
+                            <div class="align-cards">
+                                <div class="flip-card one">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img class="AL-screenshot" src="./images/portfolio.png" alt="audreyborges.com header">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <p class="paragraph">This site, audreyborges.com, was designed using HTML, CSS including grid, flexbox, and media queries, and JavaScript on the front end. JavaScript was used to change the color
+                                            of the nav bar on scroll and implement pop-out functionality for the hamburger menu that displays on smaller screens such as those on mobile devices. Audreyborges.com is a fully responsive site designed 
+                                            from a mobile-first perspective and can be viewed in both portrait and landscape modes on tablets and mobile devices.<br></br>The back end of audreyborges.com was built using PHP, PHPmyAdmin, and MySQL 
+                                            for the database and database management. Header and footer components were built in PHP, and the fully functioning contact form is in index.php. It sends the responses via email and saves them in a MySQL database.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div><br>
+                                <div id="audreys-list"></div>
                         <a href="https://audreyslist.org/" target="_blank" id="portfolio-link"><h4>Audrey's List</a> | <a href="https://github.com/AudreyKBorges/audreys-list" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
                             <div class="align-cards">
                                 <div class="flip-card one">
@@ -162,7 +184,7 @@ $dbname = "******";
                                         </div>
                                     </div>
                                 </div>
-                            </div><br>
+                                </div><br>
                             <h3>JavaScript</h3>
                             <a href="http://www.higherlower.xyz/" target="_blank" id="portfolio-link"><h4>Higher - Lower Game</a> | <a href="https://github.com/AudreyKBorges/enhanced-higher-lower" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
                             <div class="align-cards">
@@ -180,19 +202,73 @@ $dbname = "******";
                                     </div>
                                 </div>
                             </div>
+                            <a href="https://codepen.io/audrey-borges/full/KKmPpyx" target="_blank" id="portfolio-link"><h4>Log In & Sign Up Form</a> | <a href="https://codepen.io/audrey-borges/pen/KKmPpyx" target="_blank" id="portfolio-link">CodePen Project Link</h4></a>
+                            <div class="align-cards">
+                                <div class="flip-card two">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                        <img class="AL-screenshot" src="./images/login.png" alt="JS Sign Up & Log In Form">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <p class="paragraph">This is a Log In & Sign Up Form that is styled using HTML/CSS and the form switches from log in
+                                                to sign up when the appropriate tabs are clicked. The document object model (DOM) is manipulated using querySelector
+                                            and onclick events are used for the tabs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="travel-genie"></div>
                             <h3>Java</h3>
-                            <h4>Travel Genie | <a href="https://github.com/AudreyKBorges/travel-genie" target="_blank" id="portfolio-link">GitHub Project Link</a></h4>
-                            <video controls width="250">
-                                <source src="./media/travel-genie.mp4" type="video/mp4">
-                            </video>
-                            <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Dev10 Software Developer apprenticeship program 
-                                completed through Genesis10. I worked on a team with two other people, and we planned a project timeline, a wireframe, and a database 
-                                schema. This project was built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React, 
-                                HTML, CSS, SCSS, Git, and GitHub.
-                            </p>
+                                <h4>Travel Genie | <a href="https://github.com/AudreyKBorges/travel-genie" target="_blank" id="portfolio-link">GitHub Project Link</a></h4>
+                                    <video controls width="250">
+                                        <source src="./media/travel-genie.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Dev10 Software Developer apprenticeship program 
+                                        completed through Genesis10. I worked on a team with two other people, and we planned a project timeline, a wireframe, and a database 
+                                        schema. This project was built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React, 
+                                        HTML, CSS, SCSS, Git, and GitHub.
+                                    </p>
                             <h3>Content Writing</h3>
-                            <h4><a href="https://thatssola.weebly.com/" target="_blank" id="portfolio-link">A Working Girl's Guide to Los Angeles</a></h4>
-                            
+                                <h4><a href="https://thatssola.weebly.com/" target="_blank" id="portfolio-link">A Working Girl's Guide to Los Angeles</a></h4>
+                                <div class="align-cards">
+                                    <div class="flip-card two">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                            <img class="AL-screenshot" src="./images/working-girl.png" alt="A Working Girl's Guide to Los Angeles">
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <p class="paragraph">I took the course Writing for the Web at Champlain College, and A Working Girl's Guide to Los Angeles
+                                                    is my final project for that class, which showcases my knowledge of AP style and basic SEO. All of the images on the site
+                                                    were taken by me, and I wrote about my own experiences. Now, I need to do a guide for my new city--ATX!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <h3>Wireframes & Prototypes</h3>
+                                <h4>Mortar and Pestle Bakery Wireframe</h4>
+                                <p class="paragraph2">This is a site mockup for a fictitous bakery. It was created using Balsamiq Wireframes.</p>
+                                    <div>
+                                        <img class="image" src="./images/wireframeOne.png" alt="Mortar and Pestle wireframe panels 1 & 2">
+                                    </div>
+                                    <div>
+                                        <img class="image" src="./images/wireframeTwo.png" alt="Mortar and Pestle wireframe panels 3 & 4">
+                                    </div>
+                                    <div>
+                                        <img class="image" src="./images/wireframeThree.png" alt="Mortar and Pestle wireframe panels 5 & 6">
+                                    </div>
+                                    <div>
+                                        <img class="image" src="./images/wireframeFour.png" alt="Mortar and Pestle wireframe panel 7">
+                                    </div>
+                                <h4>Travel Genie Wireframe</h4>
+                                    <p class="paragraph2">This is a site mockup for <a href="#travel-genie" class="travel-genie">Travel Genie</a>. It was created using Balsamiq Wireframes.</p>
+                                        <div>
+                                            <img class="image" src="./images/TravelGenieWireframe.png" alt="Travel Genie Wireframe">
+                                        </div>
+                                <h4>Audrey's List Prototype</h4>
+                                <p class="paragraph2">This is a site mockup and prototype for <a href="#audreys-list" class="travel-genie">Audrey's List</a>. It was created using Figma.</p>
+                                    <div>
+                                        <img class="image" src="./images/ALPrototype.png" alt="Audrey's List prototype">
+                                    </div>
                         </div>
                     </section>
                     <div id="contact">
@@ -214,7 +290,7 @@ $dbname = "******";
                                 </div>
                                 <div>
                                     <div><label for="message">Message</label></div>
-                                    <textarea id="message" name="message" placeholder="Enter your message here." rows="5" cols="35"><?php echo $message;?></textarea>
+                                    <textarea id="message" name="message" placeholder="Enter your message here." rows="5" cols="30"><?php echo $message;?></textarea>
                                 </div><br>
                                 <input id="submit" type="submit" value="Send Message">
                         </form>
@@ -229,14 +305,4 @@ $dbname = "******";
                     </div>
                 </div>
                         </section>
-                        <footer class="main-footer">Audrey Borges Web Development copyright &copy; <script>document.write(new Date().getFullYear())</script></footer>
-                    </div>
-                </div>
-            </div>
-            <script src="./js/script.js"></script>
-            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-            <script>
-                AOS.init();
-            </script>
-    </body>
-</html>
+                      <?php include 'includes/footer.php'; ?>

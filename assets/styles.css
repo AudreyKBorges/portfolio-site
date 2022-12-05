@@ -20,6 +20,7 @@ video {
 .paragraph2 {
   max-width: 600px;
   display: inline-block;
+  padding: 1em;
 }
 
 @media only screen and (min-width: 320px) {
@@ -44,10 +45,18 @@ video {
     margin: auto;
   }
 
-  #dev10-img {
+  .dev10-image {
     display: block;
     height: 100%;
     width: 100%;
+    max-width: 600px;
+  }
+
+  .image, #dev10 {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
     padding-top: 1.5em;
     margin: auto;
   }
@@ -83,7 +92,7 @@ video {
     transition: 0.3s;
   }
   
-  .sidebar a:hover {
+  .sidebar a:hover, .travel-genie:hover {
     color: #FFBD69;
   }
   
@@ -146,13 +155,14 @@ video {
 
   .grid-contact {
     grid-area: contact;
-    width: 100%;
+    width: 100vw;
+    max-width: 600px;
     height: auto; 
+    margin: 0px;  
     border-radius: 8px;
     border: solid 1px #fff;
     margin-top: 3em;
     margin-bottom: 3em;
-    padding: auto;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
     background: linear-gradient(to bottom right, rgba(32, 32, 64, 0.75), rgba(84, 56, 100, 0.75), rgba(255, 99, 99, 0.75), rgba(255, 189, 105, 0.75));
   }
@@ -342,7 +352,7 @@ video {
     width: 100%;
     height: auto; 
     margin: 0px; 
-    max-width: initial; 
+    max-width: 850px; 
   }
 
   .flip-card {
@@ -368,6 +378,7 @@ video {
   .AL-screenshot {
     width: 100%;
     height: 100%;
+    box-shadow: 0 4px 8px 0 #201727, 0 6px 20px 0 #201727;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -390,6 +401,7 @@ video {
     color: white;
     transform: rotateY(180deg);
     padding: 15px;
+    box-shadow: 0 4px 8px 0 #201727, 0 6px 20px 0 #201727;
   }  
 
   /* Form */
@@ -603,14 +615,6 @@ video {
       margin: auto;
     }
   
-    #dev10-img {
-      display: block;
-      height: 75%;
-      width: 75%;
-      padding-top: 1.5em;
-      margin: auto;
-    }
-  
     #education-h3:hover {
       color: #fff;
     }
@@ -678,14 +682,6 @@ video {
       display: block;
       height: 50%;
       width: 50%;
-      margin: auto;
-    }
-  
-    #dev10-img {
-      display: block;
-      height: 50%;
-      width: 50%;
-      padding-top: 1.5em;
       margin: auto;
     }
   
