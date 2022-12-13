@@ -107,7 +107,13 @@ $dbname = "******";
                                 Figma, Python, MySQL, Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                            <p class="home-paragraph">Web development became my passion because I am fascinated by technology and I enjoy creative and analytical work.
+                            <p class="home-paragraph">I recently began my professional career as a Train Control and Management (TCMS) Developer for <a href="https://townnews.com/">TownNews.com</a>/<a href="https://lee.net/">Lee Enterprises</a>,
+                                a leading provider of local news and information. I am part of a team that develops PHP modules and applications for clients' BLOX CMS Software-as-a-Service solution that serves millions of pageviews daily nationwide. 
+                                I work with a team of product managers, frontend developers, and other stakeholders to design and define new features for vertical applications connected to the CMS and build scalable solutions that handle sudden flash 
+                                traffic to websites based on breaking news conditions around the Internet.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                            <p class="home-paragraph">Web and software development became my passion because I am fascinated by technology and I enjoy creative and analytical work.
                                 The first content management system I ever worked on was Joomla, which was used to manage my former company's website.
                                 I edited content, managed the blog, and wrote content for the blog as well. My natural curiosity drove me to learn how websites
                                 are built, so I started learning HTML and CSS then Python and my programming journey took off. I learn more every day, and I love it!</p>
@@ -196,7 +202,7 @@ $dbname = "******";
                                         <div class="flip-card-back">
                                             <p class="paragraph">Higher - Lower is a number guessing game that I developed using HTML/CSS, Bootstrap, and JavaScript.
                                                 The application prompts the user for a maximum number, validates the user input and does not allow invalid entries (negative numbers, 0, or non-numbers), 
-                                                re-prompting the user if an invalid entry is provided, and rounds decimal numbers if the user enters one. It allows for unlimited user guesses and also 
+                                                re-prompting the user if an invalid entry is provided, and rounds decimal numbers if the user enters one. It allows for unlimited user guesses and 
                                                 tracks valid guesses, guesses which are in range, are numbers, and are not duplicate guesses, to use in a victory message.</p>
                                         </div>
                                     </div>
@@ -212,7 +218,8 @@ $dbname = "******";
                                         <div class="flip-card-back">
                                             <p class="paragraph">This is a Log In & Sign Up Form that is styled using HTML/CSS and the form switches from log in
                                                 to sign up when the appropriate tabs are clicked. The document object model (DOM) is manipulated using querySelector
-                                            and onclick events are used for the tabs.</p>
+                                            and onclick events are used for the tabs. Onfocus and onblur events were used to add and remove focus to the fields as the
+                                        user interacts with them.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +233,11 @@ $dbname = "******";
                                     <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Dev10 Software Developer apprenticeship program 
                                         completed through Genesis10. I worked on a team with two other people, and we planned a project timeline, a wireframe, and a database 
                                         schema. This project was built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React, 
-                                        HTML, CSS, SCSS, Git, and GitHub.
+                                        HTML, CSS, SCSS, Git, and GitHub.<br></br>
+                                        Travel Genie uses an model-view-controller (MVC) architecture that includes a data layer, domain layer, and a UI layer, where the controllers are. 
+                                        The data layer contains repository files that interact with the database by adding or retrieving data requested by the controllers. The domain 
+                                        layer contains the business logic. This code is intended to be reusable so it can be replicated in other projects. Unit testing was done with 
+                                        Spring Boot on the data and domain layers to ensure proper functionality. This project was intended to mimic an enterprise application.
                                     </p>
                             <h3>Content Writing</h3>
                                 <h4><a href="https://thatssola.weebly.com/" target="_blank" id="portfolio-link">A Working Girl's Guide to Los Angeles</a></h4>
