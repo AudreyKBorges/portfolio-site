@@ -23,7 +23,7 @@ function Test_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
-
+ 
 $nameErr = $emailErr = "";
 $name = $email = $message = "";
 
@@ -62,32 +62,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $body = join(PHP_EOL, $bodyParagraphs);
 
         if (mail($toEmail, $emailSubject, $body, $headers)) {
-            header('Location: ./html/thank-you.html');
+            echo "<script>window.location.href='https://audreyborges.com/html/thank-you.html';</script>";
         } else {
             $errorMessage = 'Oops, something went wrong. Please try again later';
         }
     }
-}
+
 
 // db connection
-$host_name = "******";
-$username = "******";
-$password = "******";
-$dbname = "******";
+$host_name = "***************";
+$username = "***********";
+$password = "***********";
+$dbname = "*************";
 
 // Create connection
-// $conn = new mysqli($host_name, $username, $password, $dbname);
+$conn = new mysqli($host_name, $username, $password, $dbname);
 
-// // Check connection
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-// $sql = "INSERT INTO `contacts`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
+$sql = "INSERT INTO `contacts`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
 
-// if ($conn->query($sql) === false) {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-// }
+if ($conn->query($sql) === false) {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+}
 ?>
             <button class="openbtn" onclick="openNav()">☰</button>
             <div id="site-content">
@@ -102,35 +103,30 @@ $dbname = "******";
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <p class="home-paragraph">I'm a recent <i>summa cum laude</i> graduate of the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a>
-                                in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. I earned a full-stack Java certificate through Genesis10's intensive
-                                training program called <a href="https://www.dev-10.com/">Dev10</a>, and it was challenging but fun. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, 
+                                in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. I hold a certificate in Web Programming that I completed at Champlain College, and I also earned a full-stack Java certificate issued by Genesis10.
+                         		The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, 
                                 Figma, Python, MySQL, Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                            <p class="home-paragraph">I recently began my professional career as a Train Control and Management (TCMS) Developer for <a href="https://townnews.com/">TownNews.com</a>/<a href="https://lee.net/">Lee Enterprises</a>,
-                                a leading provider of local news and information. I am part of a team that develops PHP modules and applications for clients' BLOX CMS Software-as-a-Service solution that serves millions of pageviews daily nationwide. 
+                            <p class="home-paragraph">I recently began my professional career as a Total Content Management System (TCMS) Developer for <a href="https://bloxdigital.com/">BLOX Digital</a>, a leading provider of local news and information. 
+                                I am part of a team that develops PHP modules and applications for clients' BLOX CMS Software-as-a-Service solution that serves millions of pageviews daily nationwide. 
                                 I work with a team of product managers, frontend developers, and other stakeholders to design and define new features for vertical applications connected to the CMS and build scalable solutions that handle sudden flash 
                                 traffic to websites based on breaking news conditions around the Internet.</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                            <p class="home-paragraph">Web and software development became my passion because I am fascinated by technology and I enjoy creative and analytical work.
+                            <p class="home-paragraph">Software development became my passion because I am fascinated by technology, and I enjoy creative and analytical work.
                                 The first content management system I ever worked on was Joomla, which was used to manage my former company's website.
                                 I edited content, managed the blog, and wrote content for the blog as well. My natural curiosity drove me to learn how websites
                                 are built, so I started learning HTML and CSS then Python and my programming journey took off. I learn more every day, and I love it!</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <p class="home-paragraph">Austin, Texas is currently my home base, and it's a fun, friendly and laid back city with fantastic
-                                hiking, several lakes, a great art scene, and the best live music. When I'm not building an awesome new web project, I can 
-                                be found hiking, meandering through a museum or getting my coffee fix at Medici because I need my cold brew with oat milk.</p>
+                                hiking, several lakes, a great art scene, and the best live music. When I'm not building an awesome new software project, I can 
+                                be found having adventures with my husband that typically involve hiking, shopping for vintage clothing and sneakers, meandering through a museum or getting our caffeine fix from one of Austin's many amazing coffee houses.</p>
                         </div>
                         <div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <h3 id="education-h3">Education & Certificates</h3>
-                            </div>
-                            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                                <div>
-                                    <a id="dev10" href="https://www.credly.com/badges/8bcec0f7-3b0c-4273-977a-fddf432d18dd/public_url" target="_blank"><img class="dev10-image" src="./images/dev10-full-stack-java-developer.png" alt="dev10 full stack java developer"></a>
-                                </div>
                             </div>
                             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                                 <div>
@@ -166,8 +162,7 @@ $dbname = "******";
                                         </div>
                                         <div class="flip-card-back">
                                             <p class="paragraph">This site, audreyborges.com, was designed using HTML, CSS including grid, flexbox, and media queries, and JavaScript on the front end. JavaScript was used to change the color
-                                            of the nav bar on scroll and implement pop-out functionality for the hamburger menu that displays on smaller screens such as those on mobile devices. Audreyborges.com is a fully responsive site designed 
-                                            from a mobile-first perspective and can be viewed in both portrait and landscape modes on tablets and mobile devices.<br></br>The back end of audreyborges.com was built using PHP, PHPmyAdmin, and MySQL 
+                                            of the nav bar on scroll and implement pop-out functionality for the hamburger menu that displays on smaller screens such as those on mobile devices.<br></br>The back end of audreyborges.com was built using PHP, PHPmyAdmin, and MySQL 
                                             for the database and database management. Header and footer components were built in PHP, and the fully functioning contact form is in index.php. It sends the responses via email and saves them in a MySQL database.</p>
                                         </div>
                                     </div>
