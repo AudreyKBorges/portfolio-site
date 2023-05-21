@@ -31,7 +31,7 @@
     <body>
         <div class="grid-container">
             <header class="grid-banner">
-                <img id="home" class="banner" src="./images/Linkedin-banner-2021.png" alt="Audrey Borges, Web Developer">
+                <img id="home" class="banner" src="./images/Linkedin-banner-2021.png" alt="Audrey Borges, Software Developer">
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                     <ul>
