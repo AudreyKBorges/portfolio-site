@@ -27,7 +27,6 @@ function Test_input($data)
 $nameErr = $emailErr = "";
 $name = $email = $message = "";
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
         $nameErr = "* Name is required";
@@ -37,13 +36,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $nameErr = "* Only letters and white space allowed";
         }
     }
-    
+  
     if (empty($_POST["email"])) {
         $emailErr = "* Email is required";
     } else {
         $email = test_input($_POST["email"]);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "* Invalid email format";
+        }
+      
+      	if ($_POST["email"] == 'jaded3speed@gmail.com') {
+        	echo "<script>window.location.href='https://audreyborges.com/html/forbidden.html';</script>";
+        	exit;
+        }
+      
+      	if (preg_match("/@audreyborges/", $email)){
+  			echo "<script>window.location.href='https://audreyborges.com/html/forbidden.html';</script>";
+			exit;
         }
     }
 
@@ -53,16 +62,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = test_input($_POST["message"]);
     }
 
-    if (empty($nameErr && $emailErr)) {
+    if (empty($nameErr && $emailErr)) {   
         $toEmail = 'audrey.borges@audreyborges.com';
         $emailSubject = 'New email from your contact form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
         $bodyParagraphs = ["Name: {$name}\r\n", "Email: {$email}\r\n", "Message:", $message];
         $body = join(PHP_EOL, $bodyParagraphs);
-
+ 
         if (mail($toEmail, $emailSubject, $body, $headers)) {
-            echo "<script>window.location.href='https://audreyborges.com/html/thank-you.html';</script>";
+              echo "<script>window.location.href='https://audreyborges.com/html/thank-you.html';</script>";
         } else {
             $errorMessage = 'Oops, something went wrong. Please try again later';
         }
@@ -70,10 +79,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 // db connection
-$host_name = "***************";
-$username = "***********";
-$password = "***********";
-$dbname = "*************";
+$host_name = "db5010818542.hosting-data.io";
+$username = "dbu3360126";
+$password = "5eK6WHwqT9j@46q";
+$dbname = "dbs9152401";
 
 // Create connection
 $conn = new mysqli($host_name, $username, $password, $dbname);
@@ -102,16 +111,17 @@ if ($conn->query($sql) === false) {
                             <h2 class="about-me">About Me</h2>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                            <p class="home-paragraph">I'm a recent <i>summa cum laude</i> graduate of the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a>
+                            <p class="home-paragraph">I'm a recent <i>Summa Cum Laude</i> graduate of the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a>
                                 in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. I hold a certificate in Web Programming that I completed at Champlain College, and I also earned a full-stack Java certificate issued by Genesis10.
                          		The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, 
                                 Figma, Python, MySQL, Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <p class="home-paragraph">I recently began my professional career as a Total Content Management System (TCMS) Developer for <a href="https://bloxdigital.com/">BLOX Digital</a>, a leading provider of local news and information. 
-                                I am part of a team that develops PHP modules and applications for clients' BLOX CMS Software-as-a-Service solution that serves millions of pageviews daily nationwide. 
-                                I work with a team of product managers, frontend developers, and other stakeholders to design and define new features for vertical applications connected to the CMS and build scalable solutions that handle sudden flash 
-                                traffic to websites based on breaking news conditions around the Internet.</p>
+                                I am currently assisting with the development of an Adobe Photoshop UXP plugin that integrates with the BLOX Total CMS environment. During my first three months, I reenvisioned and improved the user interface by adjusting the 
+                              	spacing and layout using CSS flexbox, and also built a feature that allows elements to change color based on the user’s template preference. The software development team at BLOX develops PHP modules and applications for clients' 
+								BLOX CMS Software-as-a-Service solution that serves millions of pageviews daily nationwide. I work with a team of product managers, frontend developers, and other stakeholders to design and define new features for vertical 
+                              	applications connected to the CMS and build scalable solutions that handle sudden flash traffic to websites based on breaking news conditions around the Internet.</p>
                         </div>
                         <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                             <p class="home-paragraph">Software development became my passion because I am fascinated by technology, and I enjoy creative and analytical work.
@@ -283,7 +293,7 @@ if ($conn->query($sql) === false) {
                         <form id="form" method="post" name="form" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateCaptcha();">
                             <h2 class="contact-me">Contact Me</h2>
                                 <p class="contact-para">Let's work together!</p> 
-                                <p class="contact-para">Let me know what kind of site I can build for you.</p><br>
+                                <p class="contact-para">Let me know what kind of software application I can build for you.</p><br>
                                 <div>
                                     <label for="name" value="<?php echo $name;?>">Name  * </label><br>
                                     <span class="error"><?php echo $nameErr;?></span>
