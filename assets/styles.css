@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background-color: #202040;
   border: 0;
   margin: 0, auto;
@@ -23,12 +24,18 @@ video {
   padding: 1em;
 }
 
+.flex-content {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 320px) {
+
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
   }
-  
+
   h3 {
     padding-left: 1em;
     padding-right: 1em;
@@ -36,23 +43,7 @@ video {
 
   /* Education & Certificates subsection */
 
-  #dev10 {
-    background-color: white;
-    padding-bottom: 1em;
-    display: block;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-  }
-
-  .dev10-image {
-    display: block;
-    height: 100%;
-    width: 100%;
-    max-width: 600px;
-  }
-
-  .image, #dev10 {
+  .image {
     display: block;
     height: 100%;
     width: 100%;
@@ -82,7 +73,7 @@ video {
     transition: 0.5s;
     padding-top: 100px;
   }
-  
+
   .sidebar a {
     padding: 15px;
     text-decoration: none;
@@ -91,18 +82,19 @@ video {
     display: block;
     transition: 0.3s;
   }
-  
-  .sidebar a:hover, .travel-genie:hover {
+
+  .sidebar a:hover,
+  .travel-genie:hover {
     color: #FFBD69;
   }
-  
+
   .sidebar .closebtn {
     position: absolute;
     font-size: 50px;
     top: 0;
     right: 25px;
   }
-  
+
   .sidebar ul {
     box-shadow: none;
   }
@@ -116,7 +108,7 @@ video {
     border: none;
     padding: 16px;
   }
-  
+
   #content {
     transition: margin-left .5s;
   }
@@ -157,8 +149,8 @@ video {
     grid-area: contact;
     width: 100vw;
     max-width: 600px;
-    height: auto; 
-    margin: 0px;  
+    height: auto;
+    margin: 0px;
     border-radius: 8px;
     border: solid 1px #fff;
     margin-top: 3em;
@@ -203,21 +195,24 @@ video {
     padding-bottom: 1em;
   }
 
-  h2:after { 
-    content:"";
-    display:block;
+  h2:after {
+    content: "";
+    display: block;
     width: 6em;
     max-width: 70%;
     border-bottom: 0.1em solid #fff;
     margin: 1em auto 0;
-}
+  }
 
   h2 {
     margin-top: 3em;
     text-align: center;
   }
 
-  h2, h3, h4, p {
+  h2,
+  h3,
+  h4,
+  p {
     font-family: 'Montserrat', sans-serif;
     color: white;
     letter-spacing: .5px;
@@ -251,14 +246,14 @@ video {
   }
 
   /* Headshot Image */
-  .audrey { 
+  .audrey {
     width: 40%;
     height: auto;
-    border-radius: 50%; 
+    border-radius: 50%;
     border: #FFBD69 2px solid;
     background: #202040;
     padding: 20px;
-}
+  }
 
   /* Nav Bar */
   .main-nav {
@@ -331,8 +326,9 @@ video {
     text-align: center;
     margin-top: 10em;
   }
-  
-  .home-paragraph, .AL-paragraph {
+
+  .home-paragraph,
+  .AL-paragraph {
     display: inline-block;
     font-size: 16px;
     max-width: 600px;
@@ -350,9 +346,9 @@ video {
     padding-bottom: 2em;
     border-radius: 8px;
     width: 100%;
-    height: auto; 
-    margin: 0px; 
-    max-width: 850px; 
+    height: auto;
+    margin: 0px;
+    max-width: 850px;
   }
 
   .flip-card {
@@ -366,7 +362,7 @@ video {
     margin-right: auto;
     margin-bottom: 3em;
   }
-  
+
   .flip-card-inner {
     position: relative;
     height: 50vh;
@@ -374,17 +370,17 @@ video {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
+
   .AL-screenshot {
     width: 100%;
     height: 100%;
     box-shadow: 0 4px 8px 0 #201727, 0 6px 20px 0 #201727;
   }
-  
+
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     position: absolute;
@@ -392,7 +388,7 @@ video {
     height: 50vh;
     backface-visibility: hidden;
   }
-  
+
   .flip-card-back {
     display: flex;
     align-items: center;
@@ -402,7 +398,7 @@ video {
     transform: rotateY(180deg);
     padding: 15px;
     box-shadow: 0 4px 8px 0 #201727, 0 6px 20px 0 #201727;
-  }  
+  }
 
   /* Form */
 
@@ -429,7 +425,10 @@ video {
     margin-bottom: 2em;
   }
 
-  #email, #name, #phone, #textarea {
+  #email,
+  #name,
+  #phone,
+  #textarea {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
@@ -438,7 +437,7 @@ video {
     border: 1.5px solid #fff;
     background: transparent;
     padding: 5px;
-    text-align: center; 
+    text-align: center;
     margin: 0 auto;
     border-radius: 8px;
     margin-top: 10px;
@@ -459,12 +458,16 @@ video {
     margin-bottom: 10px;
   }
 
- select, textarea, label, textarea {
+  select,
+  textarea,
+  label,
+  textarea {
     font-family: 'Montserrat', sans-serif;
     color: #fff !important;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-family: 'Montserrat', sans-serif !important;
     border: 1.5px solid #fff;
     background: transparent;
@@ -476,7 +479,8 @@ video {
     margin: .75em !important;
   }
 
-  textarea:focus, input:focus {
+  textarea:focus,
+  input:focus {
     outline: none !important;
     box-shadow: 0 0 10px #FFBD69;
     padding: 3%;
@@ -491,7 +495,7 @@ video {
     background: #533c63;
     color: #fff;
     padding: 15px;
-    text-align: center; 
+    text-align: center;
     margin: 0 auto;
     border-radius: 8px;
   }
@@ -514,7 +518,7 @@ video {
   footer {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-size: 11px; 
+    font-size: 11px;
     max-width: 100%;
     background: #000;
     color: #fff;
@@ -526,8 +530,8 @@ video {
     bottom: 0;
     width: 100%;
     margin-top: 15px;
-    padding: 15px;  
-}
+    padding: 15px;
+  }
 
   .icon {
     width: 20px;
@@ -549,16 +553,16 @@ video {
 
   .flip-card {
     width: 80vw;
-  } 
+  }
 
   .flip-card-inner {
     width: 80vw;
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     width: 80vw;
-  } 
+  }
 
 }
 
@@ -567,7 +571,7 @@ video {
   .flip-card {
     width: 60vw;
     height: 50vw;
-  } 
+  }
 
   .flip-card-inner {
     width: 60vw;
@@ -578,7 +582,7 @@ video {
   .flip-card-back {
     width: 60vw;
     height: 50vw;
-  } 
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -593,34 +597,29 @@ video {
 
   .flip-card {
     width: 70vw;
-  } 
+  }
 
   .flip-card-inner {
     width: 70vw;
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     width: 70vw;
-  } 
+  }
 
-    /* Education & Certificates subsection */
+  /* Education & Certificates subsection */
 
-    #dev10 {
-      background-color: white;
-      padding-bottom: 1em;
-      display: block;
-      height: 75%;
-      width: 75%;
-      margin: auto;
-    }
-  
-    #education-h3:hover {
-      color: #fff;
-    }
+  #education-h3:hover {
+    color: #fff;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .flex-content {
+    margin-top: 10em;
+  }
 
   .align-cards {
     display: flex;
@@ -631,18 +630,18 @@ video {
   .flip-card {
     width: 50vw;
     height: 40vw;
-  } 
+  }
 
   .flip-card-inner {
     width: 50vw;
     height: 40vw;
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     width: 50vw;
     height: 40vw;
-  } 
+  }
 
   /* Hamburger Menu */
   .openbtn {
@@ -674,22 +673,24 @@ video {
     display: inline-block;
   }
 
-    /* Education & Certificates subsection */
+  /* Education & Certificates subsection */
 
-    #dev10 {
-      background-color: white;
-      padding-bottom: 1em;
-      display: block;
-      height: 50%;
-      width: 50%;
-      margin: auto;
-    }
-  
-    #education-h3:hover {
-      color: #fff;
-    }
+  #education-h3:hover {
+    color: #fff;
+  }
 
-    video {
-      width: 55%;
-    }
+  video {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+
+  .flip-card,
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    width: 40vw;
+    height: 30vw;
+  }
 }
