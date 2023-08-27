@@ -595,14 +595,8 @@ video {
     padding-top: 15em;
   }
 
-  .flip-card {
-    width: 70vw;
-  }
-
-  .flip-card-inner {
-    width: 70vw;
-  }
-
+  .flip-card,
+  .flip-card-inner,
   .flip-card-front,
   .flip-card-back {
     width: 70vw;
@@ -627,16 +621,8 @@ video {
     justify-content: center;
   }
 
-  .flip-card {
-    width: 50vw;
-    height: 40vw;
-  }
-
-  .flip-card-inner {
-    width: 50vw;
-    height: 40vw;
-  }
-
+  .flip-card,
+  .flip-card-inner,
   .flip-card-front,
   .flip-card-back {
     width: 50vw;
