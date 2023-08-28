@@ -319,6 +319,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div><label for="message">Message</label></div>
                             <textarea id="message" name="message" placeholder="Enter your message here." rows="5" cols="30"><?php echo $message; ?></textarea>
                         </div><br>
+                        <div id="recaptcha">
+                            <div class="g-recaptcha" data-sitekey="6Le939wnAAAAAE-dc16QEgUuSPPUOUyjHPy5lwzV"></div>
+                        </div>
+                        <br />
                         <input id="submit" type="submit" value="Send Message">
                     </form>
                     <h3 class="social-h3">Follow Me on Social</h3>

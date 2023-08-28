@@ -445,6 +445,18 @@ video {
     color: #fff;
   }
 
+  .goog-inline-block {
+    position: absolute;
+}
+
+  #recaptcha {
+    text-align: center;
+  }
+
+  .g-recaptcha {
+    display: inline-block;
+  }
+
   #contact {
     text-align: center;
     display: flex;
