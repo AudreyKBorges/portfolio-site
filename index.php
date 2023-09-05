@@ -80,10 +80,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // db connection
-    $host_name = "db5010818542.hosting-data.io";
-    $username = "dbu3360126";
-    $password = "5eK6WHwqT9j@46q";
-    $dbname = "dbs9152401";
+    $host_name = "**************";
+    $username = "**************";
+    $password = "**************";
+    $dbname = "**************";
 
     // Create connection
     $conn = new mysqli($host_name, $username, $password, $dbname);
@@ -320,7 +320,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <textarea id="message" name="message" placeholder="Enter your message here." rows="5" cols="30"><?php echo $message; ?></textarea>
                         </div><br>
                         <div id="recaptcha">
-                            <div class="g-recaptcha" data-sitekey="6Le939wnAAAAAE-dc16QEgUuSPPUOUyjHPy5lwzV"></div>
+                            <div class="g-recaptcha" data-sitekey="*********************"></div>
                         </div>
                         <br />
                         <input id="submit" type="submit" value="Send Message">
