@@ -6,7 +6,7 @@ html,
 body {
   background-color: #202040;
   border: 0;
-  margin: 0, auto;
+  margin: auto;
   padding: 0;
   /* overflow-x: hidden;  */
 }
@@ -239,7 +239,6 @@ video {
     top: 0;
     right: 0;
     left: 0;
-    display: cover;
     width: 100%;
     border-bottom: .5px solid #fff;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
@@ -447,7 +446,7 @@ video {
 
   .goog-inline-block {
     position: absolute;
-}
+  }
 
   #recaptcha {
     text-align: center;
@@ -455,6 +454,12 @@ video {
 
   .g-recaptcha {
     display: inline-block;
+  }
+
+  #submit:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
   }
 
   #contact {
@@ -499,7 +504,7 @@ video {
     color: #fff;
   }
 
-  #submit {
+  #submit:enabled {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
@@ -512,12 +517,12 @@ video {
     border-radius: 8px;
   }
 
-  #submit:hover {
+  #submit:hover:enabled {
     background-color: #FFBD69;
     color: #202040;
   }
 
-  #submit:active {
+  #submit:active:enabled {
     background-color: #f36363;
     color: #202040;
   }

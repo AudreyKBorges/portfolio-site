@@ -68,8 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailSubject = 'New email from your contact form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
-        $bodyParagraphs = ["Name: {$name}\r\n", "Email: {$email}\r\n", "Message:", $message];
-        $body = join(PHP_EOL, $bodyParagraphs);
+        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+        $body = nl2br(join("\n", $bodyParagraphs));
 
         if (mail($toEmail, $emailSubject, $body, $headers)) {
             echo "<script>window.location.href='https://audreyborges.com/html/thank-you.html';</script>";
@@ -80,10 +80,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // db connection
-    $host_name = "db5010818542.hosting-data.io";
-    $username = "dbu3360126";
-    $password = "5eK6WHwqT9j@46q";
-    $dbname = "dbs9152401";
+    $host_name = "**************";
+    $username = "**************";
+    $password = "**************";
+    $dbname = "**************";
 
     // Create connection
     $conn = new mysqli($host_name, $username, $password, $dbname);
@@ -99,7 +99,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
+
+// Checking valid form is submitted or not
+if (isset($_POST['submit_btn'])) {
+
+    // Storing name in $name variable
+    $name = $_POST['name'];
+
+    // Storing google recaptcha response in $recaptcha variable
+    $recaptcha = $_POST['g-recaptcha-response'];
+
+    // Put secret key here
+    $secret_key = '**************';
+
+    // Hitting request to the URL, Google will respond with success or error
+    $url = 'https://www.google.com/recaptcha/api/siteverify?secret='
+        . $secret_key . '&response=' . $recaptcha;
+
+    // Making request to verify captcha
+    $response = file_get_contents($url);
+
+    // Response return by google is in JSON format, so parse that json
+    $response = json_decode($response);
+
+    // Check if response is true or not
+    if ($response->success == true) {
+        echo '<script>alert("Google reCAPTACHA verified")</script>';
+    } else {
+        echo '<script>alert("Error in Google reCAPTACHA")</script>';
+    }
+}
+
 ?>
+
 <button class="openbtn" onclick="openNav()">☰</button>
 <div id="site-content">
     <div class="flex-content">
@@ -308,29 +340,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div>
                             <label for="name" value="<?php echo $name; ?>">Name * </label><br>
                             <span class="error"><?php echo $nameErr; ?></span>
-                            <input type="text" id="name" name="name" placeholder="Enter your name here.">
+                            <input type="text" id="name" name="name" placeholder="Enter your name here." required>
                         </div><br>
                         <div>
                             <label for="email" value="<?php echo $email; ?>">Email * </label><br>
                             <span class="error"><?php echo $emailErr; ?></span>
-                            <input type="email" id="email" name="email" placeholder="Enter your email here."><br>
+                            <input type="email" id="email" name="email" placeholder="Enter your email here." required><br>
                         </div>
                         <div>
                             <div><label for="message">Message</label></div>
                             <textarea id="message" name="message" placeholder="Enter your message here." rows="5" cols="30"><?php echo $message; ?></textarea>
                         </div><br>
                         <div id="recaptcha">
-                            <div class="g-recaptcha" data-sitekey="6Le939wnAAAAAE-dc16QEgUuSPPUOUyjHPy5lwzV"></div>
-                        </div>
-                        <br />
-                        <input id="submit" type="submit" value="Send Message">
+                            <div for="g-recaptcha" class="g-recaptcha" data-sitekey="6Le939wnAAAAAE-dc16QEgUuSPPUOUyjHPy5lwzV" data-callback="enableBtn"></div>
+                        </div><br>
+                        <input id="submit" type="submit" value="Send Message" name="submit_btn" onclick="" disabled="disabled">
                     </form>
                     <h3 class="social-h3">Follow Me on Social</h3>
                     <div class="social">
                         <a target="_blank" href="https://www.linkedin.com/in/audreyborges/"><img class="icon" src="./images/linkedin.png" alt="LinkedIn logo"></a>
-                        <a target="_blank" href="https://twitter.com/audreykborges"><img class="icon" src="./images/twitter.png" alt="Twitter logo"></a>
                         <a target="_blank" href="https://github.com/AudreyKBorges"><img class="icon" src="./images/github.png" alt="GitHub logo"></a>
                         <a target="_blank" href="https://codepen.io/audrey-borges"><img class="icon" src="./images/codepen.png" alt="CodePen logo"></a>
+                        <a target="_blank" href="https://instagram.com/audreykborges"><img class="icon" src="./images/instagram.png" alt="Instagram logo"></a>
                     </div>
             </div>
         </div>
