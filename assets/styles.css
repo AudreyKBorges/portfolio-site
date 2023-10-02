@@ -8,7 +8,6 @@ body {
   border: 0;
   margin: auto;
   padding: 0;
-  /* overflow-x: hidden;  */
 }
 
 video {
@@ -540,19 +539,15 @@ video {
     background: #000;
     color: #fff;
     height: auto;
-    /* overflow: hidden; */
-    position: relative;
-    /* display: inline-block; */
-    left: 0;
+    overflow-x: hidden;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     margin-top: 15px;
     padding: 15px;
-
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     right: 66px;
-    overflow-x: hidden;
   }
 
   .icon {
