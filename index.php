@@ -147,10 +147,11 @@ if (isset($_POST['submit_btn'])) {
                 <h2 class="about-me">About Me</h2>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                <p class="home-paragraph">I'm a recent <i>Summa Cum Laude</i> graduate of the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a>
-                    in Burlington, Vermont, and I am familiar with front-end and back-end web technologies. I hold a certificate in Web Programming that I completed at Champlain College,
-                    and I also earned a full-stack Java certificate issued by Genesis10. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress,
-                    Figma, Python, MySQL, Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
+                <p class="home-paragraph">In 2022, I graduated <i>Summa Cum Laude</i> from the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a>
+                    in Burlington, Vermont, and I was recently accepted to the Master of Science in Computer Science program with a specialization in interactive intelligence at <a href="https://www.gatech.edu/">Georgia
+                        Institute of Technology</a> in Atlanta, Georgia. I also hold a certificate in Web Programming that I completed at Champlain College and a full-stack Java certificate issued by Genesis10.
+                    The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, Figma, Python, MySQL, Sass/SCSS, Bootstrap and had
+                    exposure to Invision and the PHP framework, Symfony.</p>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                 <p class="home-paragraph">I recently began my professional career as a Total Content Management System (TCMS) Developer for <a href="https://bloxdigital.com/">BLOX Digital</a>, a leading provider of local news and information.
@@ -357,7 +358,7 @@ if (isset($_POST['submit_btn'])) {
                         <br />
                         <input id="submit" type="submit" value="Send Message">
                     </form>
-                    <h3 class="social-h3">Follow Me on Social</h3>
+                    <h3 class="social-h3">Let's connect!</h3>
                     <div class="social">
                         <a target="_blank" href="https://www.linkedin.com/in/audreyborges/"><img class="icon" src="./images/linkedin.png" alt="LinkedIn logo"></a>
                         <a target="_blank" href="https://github.com/AudreyKBorges"><img class="icon" src="./images/github.png" alt="GitHub logo"></a>
