@@ -533,21 +533,18 @@ video {
   /* Footer */
   footer {
     font-family: 'Montserrat', sans-serif;
-    /* text-align: center; */
     font-size: 11px;
-    /* max-width: 100%; */
     background: #000;
     color: #fff;
     height: auto;
     overflow-x: hidden;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     margin-top: 15px;
     padding: 15px;
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    right: 66px;
   }
 
   .icon {
