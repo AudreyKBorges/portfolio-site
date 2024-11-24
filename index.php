@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP version 8.08
+ * PHP version 8.2
  * 
  * @category None
  * @package  None
@@ -80,10 +80,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // db connection
-    $host_name = "**************";
-    $username = "**************";
-    $password = "**************";
-    $dbname = "**************";
+    $host_name = "db5010818542.hosting-data.io";
+    $username = "dbu3360126";
+    $password = "5eK6WHwqT9j@46q";
+    $dbname = "dbs9152401";
 
     // Create connection
     $conn = new mysqli($host_name, $username, $password, $dbname);
@@ -147,16 +147,18 @@ if (isset($_POST['submit_btn'])) {
                 <h2 class="about-me">About Me</h2>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                <p class="home-paragraph">In 2022, I graduated <i>Summa Cum Laude</i> from the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a>
-                    in Burlington, Vermont, and I was recently accepted to the Master of Science in Computer Science program with a specialization in interactive intelligence at <a href="https://www.gatech.edu/">Georgia
-                        Institute of Technology</a> in Atlanta, Georgia. I also hold a certificate in Web Programming that I completed at Champlain College and a full-stack Java certificate issued by Genesis10.
-                    The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, Figma, Python, MySQL, Sass/SCSS, Bootstrap and had
-                    exposure to Invision and the PHP framework, Symfony.</p>
+                <p class="home-paragraph">I am a graduate student pursuing my Master of Science in Computer Science degree with a specialization in interactive intelligence at <a href="https://www.gatech.edu/">Georgia Institute of Technology</a> 
+                    in Atlanta, Georgia. I graduated <i>Summa Cum Laude</i> from the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a> in Burlington, Vermont, and I also earned 
+                    certificates in Web Programming and full-stack Java. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, Figma, Python, MySQL, 
+                    Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                <p class="home-paragraph">I recently began my professional career as a Total Content Management System (TCMS) Developer for <a href="https://bloxdigital.com/">BLOX Digital</a>, a leading provider of local news and information.
+                <p class="home-paragraph">I began my professional career as a Total Content Management System (TCMS) Developer for <a href="https://bloxdigital.com/">BLOX Digital</a>, a leading provider of local news and information.
                     I am currently assisting with the development of an Adobe Photoshop UXP plugin that integrates with the BLOX Total CMS environment. During my first three months, I reenvisioned and improved the user
-                    interface by adjusting the spacing and layout using CSS flexbox, and also built a feature that allows elements to change color based on the user’s template preference. The software development team at BLOX
+                    interface by adjusting the spacing and layout using CSS flexbox, and also built a feature that allows elements to change color based on the user’s template preference.</p> 
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
+                 <p class="home-paragraph">The software development team at BLOX
                     develops PHP modules and applications for clients' BLOX CMS Software-as-a-Service solution that serves millions of pageviews daily nationwide. I work with a team of product managers, frontend developers, and other stakeholders
                     to design and define new features for vertical applications connected to the CMS and build scalable solutions that handle sudden flash traffic to websites based on breaking news conditions around the Internet.</p>
             </div>
@@ -164,12 +166,13 @@ if (isset($_POST['submit_btn'])) {
                 <p class="home-paragraph">Software development became my passion because I am fascinated by technology, and I enjoy creative and analytical work.
                     The first content management system I ever worked on was Joomla, which was used to manage my former company's website.
                     I edited content, managed the blog, and wrote content for the blog as well. My natural curiosity drove me to learn how websites
-                    are built, so I started learning HTML and CSS then Python and my programming journey took off. I learn more every day, and I love it!</p>
+                    are built, so I started learning HTML and CSS then Python and JavaScript and my programming journey took off. I learn more every day, and I love it!</p>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                 <p class="home-paragraph">Austin, Texas is currently my home base, and it's a fun, friendly and laid back city with fantastic
                     hiking, several lakes, a great art scene, and the best live music. When I'm not building an awesome new software project, I can
-                    be found having adventures with my husband that typically involve hiking, shopping for vintage clothing and sneakers, meandering through a museum or getting our caffeine fix from one of Austin's many amazing coffee houses.</p>
+                    be found having adventures with my husband that typically involve hiking, shopping for vintage clothing and sneakers, meandering 
+                    through a museum or getting a cold brew coffee or latte from one of Austin's many great coffee houses.</p>
             </div>
             <div>
                 <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
@@ -199,9 +202,39 @@ if (isset($_POST['submit_btn'])) {
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                 <div class="project">
+                    <h3>BLOX Total CMS | UI Development | Adobe UXP</h3>
+                    <p class="paragraph2">
+                    Two years into my role as a BLOX Total CMS Developer at <a href="https://www.bloxdigital.com" target="_blank" id="blox-link">BLOX Digital</a>, I find myself more passionate about my career than ever before. Working alongside a talented and supportive team, I’ve had incredible opportunities to learn, grow, and contribute meaningfully. I’ve been at the forefront of developing the BLOX Total CMS Client for Adobe Photoshop and the BLOX Total CMS Plug-in for InDesign, taking a leading role in designing and implementing user interfaces and core functionalities. These projects have been instrumental in shaping both my technical expertise and collaborative skills.</p>
+                    <h4><a href="https://exchange.adobe.com/apps/cc/4b709293/blox-total-cms-client" target="_blank" id="photoshop-link">
+                    BLOX Total CMS Client for Adobe Photoshop</a></h4>
+                    <div class="align-cards">
+                        <div class="flip-card one">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img class="AL-screenshot" src="./images/Photoshop.png" alt="audreyborges.com header">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="paragraph">The BLOX Total CMS client for Adobe Photoshop® allows BLOX Total CMS clients without appliances to create and edit image assets in any BLOX Total CMS domain. Images can be modified using any of Adobe Photoshop’s image editing options so long as the file formats can remain as a .jpg or .png file as BLOX Total CMS requires. Users can edit nearly any of the BLOX metadata including title, slug, workflow, priority, presentation mode, caption, credit, authors, sections, flags and keywords. In addition, assets can be budgeted to a BLOX Total CMS Edition, Section or Page. Finally, it is easy to add the assets as children to any article or collection. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4><a href="https://exchange.adobe.com/apps/cc/e6cf5311/blox-total-cms-plug-in-for-indesign" target="_blank" id="indesign-link">
+                    BLOX Total CMS Plug-in for Adobe InDesign</a></h4>
+                    <div class="align-cards">
+                        <div class="flip-card one">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img class="AL-screenshot" src="./images/InDesign.png" alt="audreyborges.com header">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="paragraph">The BLOX Total CMS Plug-in for Adobe InDesign® allows BLOX Total CMS clients without appliances to create and edit snippets in any BLOX Total CMS domain. This Adobe InDesign plug-in allows a BLOX Total CMS user to create, place, and manage BLOX Total CMS snippets. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <h3>PHP & WordPress</h3>
-                    <a href="https://www.audreyborges.com/" target="_blank" id="portfolio-link">
-                        <h4>Portfolio Site
+                        <h4><a href="#home" id="home-link">Portfolio Site
                     </a> | <a href="https://github.com/AudreyKBorges/portfolio-site" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
                     <div class="align-cards">
                         <div class="flip-card one">
@@ -236,7 +269,7 @@ if (isset($_POST['submit_btn'])) {
                                 </div>
                             </div>
                         </div>
-                    </div><br>
+                    </div>
                     <h3>JavaScript</h3>
                     <a href="http://www.higherlower.xyz/" target="_blank" id="portfolio-link">
                         <h4>Higher - Lower Game
@@ -277,9 +310,9 @@ if (isset($_POST['submit_btn'])) {
                     <div id="travel-genie"></div>
                     <h3>Java</h3>
                     <h4>Travel Genie | <a href="https://github.com/AudreyKBorges/travel-genie" target="_blank" id="portfolio-link">GitHub Project Link</a></h4>
-                    <video controls width="250">
-                        <source src="./media/travel-genie.mp4" type="video/mp4">
-                    </video>
+                        <video controls="true" width="250" height="125" preload="auto" autoplay loop muted playsinline>
+                            <source src="./media/travel-genie.mp4" type="video/mp4">
+                        </video>                    
                     <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Dev10 Software Developer apprenticeship program
                         completed through Genesis10. I worked on a team with two other people, and we planned a project timeline, a wireframe, and a database
                         schema. This project was built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React,
@@ -300,12 +333,34 @@ if (isset($_POST['submit_btn'])) {
                                 <div class="flip-card-back">
                                     <p class="paragraph">I took the course Writing for the Web at Champlain College, and A Working Girl's Guide to Los Angeles
                                         is my final project for that class, which showcases my knowledge of AP style and basic SEO. All of the images on the site
-                                        were taken by me, and I wrote about my own experiences. Now, I need to do a guide for my new city--ATX!</p>
+                                        were taken by me, and I wrote about my own experiences.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <h3>Wireframes & Prototypes</h3>
+                    <h4>Audrey's List Resource Page Prototype</h4>
+                    <p class="paragraph2">This is a video prototype for the new Resources page on <a href="https://www.audreyslist.org" target="_blank" travel-genie">Audrey's List</a>. The prototype was created using Figma.</p>
+                    <div>
+                        <video controls="true" width="250" height="125" preload="auto" autoplay loop muted playsinline>
+                            <source src="./media/AudreysList.mp4" type="video/mp4">
+                        </video>  
+                    </div>
+                    <h4>JobCompare Android App Prototype</h4>
+                    <p class="paragraph2">This is a prototype for an Android app that I built as part of a group project for CS-6300 Software Development Process at Georgia Institute of Technology.<a href="#audreys-list" class="travel-genie">JobCompare App</a>. It was created using Figma.</p>
+                    <div>
+                        <img class="image" src="./images/JobCompare.png" alt="JobCompare prototype">
+                    </div>
+                    <h4>Travel Genie Wireframe</h4>
+                    <p class="paragraph2">This is a site mockup for <a href="#travel-genie" class="travel-genie">Travel Genie</a>. It was created using Balsamiq Wireframes.</p>
+                    <div>
+                        <img class="image" src="./images/TravelGenieWireframe.png" alt="Travel Genie Wireframe">
+                    </div>
+                    <h4>Audrey's List Prototype</h4>
+                    <p class="paragraph2">This is a site mockup and prototype for <a href="#audreys-list" class="travel-genie">Audrey's List</a>. It was created using Figma.</p>
+                    <div>
+                        <img class="image" src="./images/ALPrototype.png" alt="Audrey's List prototype">
+                    </div>
                     <h4>Mortar and Pestle Bakery Wireframe</h4>
                     <p class="paragraph2">This is a site mockup for a fictitous bakery. It was created using Balsamiq Wireframes.</p>
                     <div>
@@ -319,16 +374,6 @@ if (isset($_POST['submit_btn'])) {
                     </div>
                     <div>
                         <img class="image" src="./images/wireframeFour.png" alt="Mortar and Pestle wireframe panel 7">
-                    </div>
-                    <h4>Travel Genie Wireframe</h4>
-                    <p class="paragraph2">This is a site mockup for <a href="#travel-genie" class="travel-genie">Travel Genie</a>. It was created using Balsamiq Wireframes.</p>
-                    <div>
-                        <img class="image" src="./images/TravelGenieWireframe.png" alt="Travel Genie Wireframe">
-                    </div>
-                    <h4>Audrey's List Prototype</h4>
-                    <p class="paragraph2">This is a site mockup and prototype for <a href="#audreys-list" class="travel-genie">Audrey's List</a>. It was created using Figma.</p>
-                    <div>
-                        <img class="image" src="./images/ALPrototype.png" alt="Audrey's List prototype">
                     </div>
                 </div>
         </section>

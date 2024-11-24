@@ -13,7 +13,7 @@
 </div>
 </div>
 </div> <!-- End content  -->
-<footer class="main-footer">A-B WebDev copyright &copy; <script>
+<footer class="main-footer">A-B WebDev copyright &copy; 2022 - <script>
         document.write(new Date().getFullYear())
     </script>
 </footer>

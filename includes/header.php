@@ -14,7 +14,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrey Borges Web Developer</title>
+    <title>Audrey Borges Software Developer</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="stylesheet" href="./assets/normalize.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -31,7 +31,7 @@
     <body>
         <div class="grid-container">
             <header class="grid-banner">
-                <img id="home" class="banner" src="./images/Linkedin-banner-2021.png" alt="Audrey Borges, Software Developer">
+                <img id="home" class="banner" src="./images/Linkedin-banner-2023.png" alt="Audrey Borges, Software Developer">
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                     <ul>
