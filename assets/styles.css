@@ -246,7 +246,7 @@ video {
 
   /* Headshot Image */
   .audrey {
-    width: 70%;
+    width: 40%;
     height: auto;
     border-radius: 50%;
     border: #FFBD69 2px solid;
@@ -1114,10 +1114,6 @@ video {
   }
   
   @media only screen and (min-width: 481px) {
-
-    .audrey {
-      width: 60%;
-    }
   
     .flip-card {
       width: 80vw;
@@ -1135,10 +1131,6 @@ video {
   }
   
   @media only screen and (min-width: 481px) and (orientation : landscape) {
-
-    .audrey {
-      width: 70%;
-    }
   
     .flip-card {
       width: 60vw;
@@ -1158,10 +1150,6 @@ video {
   }
   
   @media only screen and (min-width: 768px) {
-
-    .audrey {
-      width: 50%;
-    }
   
     video {
       width: 75%;
@@ -1186,10 +1174,6 @@ video {
   }
   
   @media only screen and (min-width: 1024px) {
-
-    .audrey {
-      width: 40%;
-    }
   
     .flex-content {
       margin-top: 10em;
