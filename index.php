@@ -80,10 +80,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // db connection
-    $host_name = "db5010818542.hosting-data.io";
-    $username = "dbu3360126";
-    $password = "5eK6WHwqT9j@46q";
-    $dbname = "dbs9152401";
+    $host_name = "";
+    $username = "";
+    $password = "";
+    $dbname = "";
 
     // Create connection
     $conn = new mysqli($host_name, $username, $password, $dbname);
@@ -339,13 +339,6 @@ if (isset($_POST['submit_btn'])) {
                         </div>
                     </div>
                     <h3>Wireframes & Prototypes</h3>
-                    <h4>Audrey's List Resource Page Prototype</h4>
-                    <p class="paragraph2">This is a video prototype for the new Resources page on <a href="https://www.audreyslist.org" target="_blank" travel-genie">Audrey's List</a>. The prototype was created using Figma.</p>
-                    <div>
-                        <video controls="true" width="250" height="125" preload="auto" autoplay loop muted playsinline>
-                            <source src="./media/AudreysList.mp4" type="video/mp4">
-                        </video>  
-                    </div>
                     <h4>JobCompare Android App Prototype</h4>
                     <p class="paragraph2">This is a prototype for an Android app that I built as part of a group project for CS-6300 Software Development Process at Georgia Institute of Technology.<a href="#audreys-list" class="travel-genie">JobCompare App</a>. It was created using Figma.</p>
                     <div>
