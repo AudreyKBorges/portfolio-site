@@ -246,7 +246,7 @@ video {
 
   /* Headshot Image */
   .audrey {
-    width: 40%;
+    max-width: 50%;
     height: auto;
     border-radius: 50%;
     border: #FFBD69 2px solid;
@@ -795,7 +795,7 @@ video {
   
     /* Headshot Image */
     .audrey {
-      width: 40%;
+      max-width: 50%;
       height: auto;
       border-radius: 50%;
       border: #FFBD69 2px solid;

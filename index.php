@@ -137,9 +137,11 @@ if (isset($_POST['submit_btn'])) {
     <div class="flex-content">
         <section class="grid-about">
             <div id="about"></div>
-            <div data-aos="zoom-in" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                <h1>Hello, I'm Audrey!</h1>
-            </div>
+            <h1>
+                <span data-aos="fade-left" data-aos-duration="1000">Hello,</span>
+                <span data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">I'm</span>
+                <span data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">Audrey!</span>
+            </h1>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                 <img class="audrey" src="./images/audrey.jpg" alt="Headshot of Audrey">
             </div>
@@ -147,18 +149,18 @@ if (isset($_POST['submit_btn'])) {
                 <h2 class="about-me">About Me</h2>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                <p class="home-paragraph">I am a graduate student pursuing my Master of Science in Computer Science degree with a specialization in interactive intelligence at <a href="https://www.gatech.edu/">Georgia Institute of Technology</a> 
-                    in Atlanta, Georgia. I graduated <i>Summa Cum Laude</i> from the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a> in Burlington, Vermont, and I also earned 
-                    certificates in Web Programming and full-stack Java. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, Figma, Python, MySQL, 
+                <p class="home-paragraph">I am a graduate student pursuing my Master of Science in Computer Science degree with a specialization in interactive intelligence at <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>
+                    in Atlanta, Georgia. I graduated <i>Summa Cum Laude</i> from the Bachelor of Science program in Web Design and Development at <a href="https://www.champlain.edu/">Champlain College</a> in Burlington, Vermont, and I also earned
+                    certificates in Web Programming and full-stack Java. The stack used for this site as well as a couple of other past projects is pure HTML/CSS, JavaScript, and PHP. I have also worked with WordPress, Figma, Python, MySQL,
                     Sass/SCSS, Bootstrap and had exposure to Invision and the PHP framework, Symfony.</p>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                 <p class="home-paragraph">I began my professional career as a Total Content Management System (TCMS) Developer for <a href="https://bloxdigital.com/">BLOX Digital</a>, a leading provider of local news and information.
                     I am currently assisting with the development of an Adobe Photoshop UXP plugin that integrates with the BLOX Total CMS environment. During my first three months, I reenvisioned and improved the user
-                    interface by adjusting the spacing and layout using CSS flexbox, and also built a feature that allows elements to change color based on the user’s template preference.</p> 
+                    interface by adjusting the spacing and layout using CSS flexbox, and also built a feature that allows elements to change color based on the user’s template preference.</p>
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
-                 <p class="home-paragraph">The software development team at BLOX
+                <p class="home-paragraph">The software development team at BLOX
                     develops PHP modules and applications for clients' BLOX CMS Software-as-a-Service solution that serves millions of pageviews daily nationwide. I work with a team of product managers, frontend developers, and other stakeholders
                     to design and define new features for vertical applications connected to the CMS and build scalable solutions that handle sudden flash traffic to websites based on breaking news conditions around the Internet.</p>
             </div>
@@ -171,7 +173,7 @@ if (isset($_POST['submit_btn'])) {
             <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="200" data-aos-easing="ease-in-quad">
                 <p class="home-paragraph">Austin, Texas is currently my home base, and it's a fun, friendly and laid back city with fantastic
                     hiking, several lakes, a great art scene, and the best live music. When I'm not building an awesome new software project, I can
-                    be found having adventures with my husband that typically involve hiking, shopping for vintage clothing and sneakers, meandering 
+                    be found having adventures with my husband that typically involve hiking, shopping for vintage clothing and sneakers, meandering
                     through a museum or getting a cold brew coffee or latte from one of Austin's many great coffee houses.</p>
             </div>
             <div>
@@ -204,9 +206,9 @@ if (isset($_POST['submit_btn'])) {
                 <div class="project">
                     <h3>BLOX Total CMS | UI Development | Adobe UXP</h3>
                     <p class="paragraph2">
-                    Two years into my role as a BLOX Total CMS Developer at <a href="https://www.bloxdigital.com" target="_blank" id="blox-link">BLOX Digital</a>, I find myself more passionate about my career than ever before. Working alongside a talented and supportive team, I’ve had incredible opportunities to learn, grow, and contribute meaningfully. I’ve been at the forefront of developing the BLOX Total CMS Client for Adobe Photoshop and the BLOX Total CMS Plug-in for InDesign, taking a leading role in designing and implementing user interfaces and core functionalities. These projects have been instrumental in shaping both my technical expertise and collaborative skills.</p>
+                        Two years into my role as a BLOX Total CMS Developer at <a href="https://www.bloxdigital.com" target="_blank" id="blox-link">BLOX Digital</a>, I find myself more passionate about my career than ever before. Working alongside a talented and supportive team, I’ve had incredible opportunities to learn, grow, and contribute meaningfully. I’ve been at the forefront of developing the BLOX Total CMS Client for Adobe Photoshop and the BLOX Total CMS Plug-in for InDesign, taking a leading role in designing and implementing user interfaces and core functionalities. These projects have been instrumental in shaping both my technical expertise and collaborative skills.</p>
                     <h4><a href="https://exchange.adobe.com/apps/cc/4b709293/blox-total-cms-client" target="_blank" id="photoshop-link">
-                    BLOX Total CMS Client for Adobe Photoshop</a></h4>
+                            BLOX Total CMS Client for Adobe Photoshop</a></h4>
                     <div class="align-cards">
                         <div class="flip-card one">
                             <div class="flip-card-inner">
@@ -220,7 +222,7 @@ if (isset($_POST['submit_btn'])) {
                         </div>
                     </div>
                     <h4><a href="https://exchange.adobe.com/apps/cc/e6cf5311/blox-total-cms-plug-in-for-indesign" target="_blank" id="indesign-link">
-                    BLOX Total CMS Plug-in for Adobe InDesign</a></h4>
+                            BLOX Total CMS Plug-in for Adobe InDesign</a></h4>
                     <div class="align-cards">
                         <div class="flip-card one">
                             <div class="flip-card-inner">
@@ -234,8 +236,8 @@ if (isset($_POST['submit_btn'])) {
                         </div>
                     </div>
                     <h3>PHP & WordPress</h3>
-                        <h4><a href="#home" id="home-link">Portfolio Site
-                    </a> | <a href="https://github.com/AudreyKBorges/portfolio-site" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
+                    <h4><a href="#home" id="home-link">Portfolio Site
+                        </a> | <a href="https://github.com/AudreyKBorges/portfolio-site" target="_blank" id="portfolio-link">GitHub Project Link</h4></a>
                     <div class="align-cards">
                         <div class="flip-card one">
                             <div class="flip-card-inner">
@@ -310,9 +312,9 @@ if (isset($_POST['submit_btn'])) {
                     <div id="travel-genie"></div>
                     <h3>Java</h3>
                     <h4>Travel Genie | <a href="https://github.com/AudreyKBorges/travel-genie" target="_blank" id="portfolio-link">GitHub Project Link</a></h4>
-                        <video controls="true" width="250" height="125" preload="auto" autoplay loop muted playsinline>
-                            <source src="./media/travel-genie.mp4" type="video/mp4">
-                        </video>                    
+                    <video controls="true" width="250" height="125" preload="auto" autoplay loop muted playsinline>
+                        <source src="./media/travel-genie.mp4" type="video/mp4">
+                    </video>
                     <p class="paragraph2">Travel Genie is my capstone project developed at the end of my Dev10 Software Developer apprenticeship program
                         completed through Genesis10. I worked on a team with two other people, and we planned a project timeline, a wireframe, and a database
                         schema. This project was built using the following technologies: Java, Java Spring Framework, Java Security, JUnit, MySQL, Docker, React,
