@@ -2,7 +2,7 @@
 This is my portfolio site! :)
 
 ### Front end:
-- HTML/CSS (grid)
+- HTML/CSS (flex)
 - JavaScript
 
 This site is fully responsive designed from a mobile-first perspective. A media query was added to display the site in landscape mode on a mobile device.

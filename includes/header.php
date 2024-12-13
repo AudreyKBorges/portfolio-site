@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHP version 8.08
  * 
@@ -28,12 +29,20 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-    <body>
-        <div class="grid-container">
-            <header class="grid-banner">
-                <img id="home" class="banner" src="./images/Linkedin-banner-2023.png" alt="Audrey Borges, Software Developer">
-                <div id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+<body>
+    <div class="flex-container">
+        <header class="flex-banner">
+            <img id="home" class="banner" src="./images/Linkedin-banner-2023.png" alt="Audrey Borges, Software Developer">
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="./html/resume.html" target="_blank">Résumé</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <nav class="main-nav" id="main-nav">
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -41,15 +50,7 @@
                         <li><a href="./html/resume.html" target="_blank">Résumé</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                    <nav class="main-nav" id="main-nav">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="./html/resume.html" target="_blank">Résumé</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <div id="content">
+                </nav>
+            </div>
+        </header>
+        <div id="content">
