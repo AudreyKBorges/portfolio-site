@@ -84,6 +84,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
             $body = nl2br(join("\n", $bodyParagraphs));
 
+            // db connection
+            $host_name = "";
+            $username = "";
+            $password = "";
+            $dbname = "";
+
+            // Create connection
+            $conn = new mysqli($host_name, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "INSERT INTO `contacts`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
+
+            if ($conn->query($sql) === false) {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
             if (mail($toEmail, $emailSubject, $body, $headers)) {
                 // Redirect using PHP
                 header("Location: https://audreyborges.com/html/thank-you.html");
@@ -99,26 +119,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $errorMessage = 'Invalid email address.';
         }
-    }
-
-    // db connection
-    $host_name = "";
-    $username = "";
-    $password = "";
-    $dbname = "";
-
-    // Create connection
-    $conn = new mysqli($host_name, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "INSERT INTO `contacts`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
-
-    if ($conn->query($sql) === false) {
-        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 
