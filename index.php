@@ -1,5 +1,5 @@
 <?php
-
+ob_start(); // Start output buffering
 /**
  * PHP version 8.2
  * 
@@ -17,6 +17,14 @@ require 'includes/header.php';
  * 
  * @return string 
  */
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+
+if (headers_sent($file, $line)) {
+    die("🚨 Headers already sent in $file on line $line");
+}
+
 function Test_input($data)
 {
     $data = trim($data);
@@ -33,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nameErr = "* Name is required";
     } else {
         $name = test_input($_POST["name"]);
-        if (!preg_match("/^[a-zA-Z-' ] *$/", $name)) {
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
             $nameErr = "* Only letters and white space allowed";
         }
     }
@@ -63,21 +71,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = test_input($_POST["message"]);
     }
 
-    if (empty($nameErr && $emailErr)) {
+    if (empty($nameErr) && empty($emailErr)) {
         $toEmail = 'audrey.borges@audreyborges.com';
         $emailSubject = 'New email from your contact form';
-        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
-        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
-        $body = nl2br(join("\n", $bodyParagraphs));
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/[\r\n]/", $email)) {
+            $fromEmail = "noreply@audreyborges.com";
+            $headers = "From: $fromEmail\r\n";
+            $headers .= "Reply-To: $email\r\n";
+            $headers .= "Content-Type: text/html; charset=iso-8859-1\r\n";
 
-        if (mail($toEmail, $emailSubject, $body, $headers)) {
-            echo "<script>window.location.href='https://audreyborges.com/html/thank-you.html';</script>";
+            $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+            $body = nl2br(join("\n", $bodyParagraphs));
+
+            if (mail($toEmail, $emailSubject, $body, $headers)) {
+                // Redirect using PHP
+                header("Location: https://audreyborges.com/html/thank-you.html");
+                exit();
+
+                // If header() fails, fallback to JavaScript redirect
+                echo "<script>window.location.href='https://audreyborges.com/html/thank-you.html';</script>";
+                exit();
+            } else {
+                error_log("Mail sending failed.");
+                $errorMessage = 'Oops, something went wrong. Please try again later.';
+            }
         } else {
-            $errorMessage = 'Oops, something went wrong. Please try again later';
+            $errorMessage = 'Invalid email address.';
         }
     }
-
 
     // db connection
     $host_name = "";
@@ -129,7 +151,7 @@ if (isset($_POST['submit_btn'])) {
         echo '<script>alert("Error in Google reCAPTACHA")</script>';
     }
 }
-
+ob_end_flush(); // End output buffering
 ?>
 
 <button class="openbtn" onclick="openNav()">☰</button>
